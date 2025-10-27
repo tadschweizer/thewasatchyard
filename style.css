@@ -2,20 +2,23 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  /* Maintain a dark background but use a slightly deeper hue for richness */
   background-color: #0D1B2A;
-  /* Use a lighter off‑white for text to increase contrast against dark backgrounds */
-  color: #F5F6F8;
+  /* Increase contrast by brightening the default text colour */
+  color: #F0F4F8;
 }
 
 /* Generic card-style section with rounded corners and shadow for better separation.  
    Use a slightly lighter background than the page to create a distinct "bubble" effect. */
+/* Card sections provide separation between content. Use a slightly lighter
+   navy shade to help the text stand out without losing the overall dark
+   aesthetic. */
 .card-section {
-  /* Lighten the card background slightly for better contrast with text */
-  background: #132d54;
+  background: #1c3254;
   border-radius: 12px;
   padding: 40px;
   margin: 80px 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo container uses flex to align the icon and text */
@@ -25,11 +28,11 @@ body {
 }
 
 /* Size and spacing for the logo icon */
+/* Shrink the logo icon so the header doesn't dominate the top of the page */
 .navbar .logo svg {
-  /* Shrink the logo icon so the header isn't too large */
-  width: 22px;
-  height: 22px;
-  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
   flex-shrink: 0;
 }
 
@@ -58,7 +61,7 @@ body {
 
 /* Base styles for nav links */
 .navbar li a {
-  color: #F5F6F8;
+  color: #F0F4F8;
   text-decoration: none;
   font-weight: 500;
   display: block;
@@ -78,13 +81,14 @@ body {
   z-index: 100;
   background: rgba(13, 27, 42, 0.9);
   /* Reduce vertical padding on the navbar to decrease its overall height */
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 .navbar .logo {
   color: #F5F6F8;
   font-weight: bold;
-  font-size: 1.2rem;
+  /* Reduce the logo text size further to keep the header compact */
+  font-size: 0.9rem;
   display: inline-block;
 }
 
@@ -104,7 +108,8 @@ body {
 }
 
 .navbar a {
-  color: #E0E1DD;
+  /* Brighten nav links for readability against the dark navbar */
+  color: #F0F4F8;
   text-decoration: none;
   font-weight: 500;
 }
@@ -118,8 +123,11 @@ body {
 
 .hero {
   position: relative;
-  /* Use a dark gradient for the hero background instead of an external image. */
-  background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #415A77 100%);
+  /* Combine a subtle gradient overlay with a background image. Users can replace
+     `assets/hero.png` with their own photo to customise the hero section. */
+  background-image: linear-gradient(135deg, rgba(13,27,42,0.9) 0%, rgba(27,38,59,0.8) 50%, rgba(65,90,119,0.6) 100%), url('assets/hero.png');
+  background-size: cover;
+  background-position: center;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -231,7 +239,8 @@ body {
 
 /* Stats section */
 .stats {
-  background: #1B263B;
+  /* Use a lighter shade behind the stats area to differentiate from card sections */
+  background: #112a44;
   padding: 60px 0;
 }
 
@@ -243,8 +252,8 @@ body {
 }
 
 .stat {
-  /* Lighten background for stat cards */
-  background: #132d54;
+  /* Use the same card background as other card sections for visual harmony */
+  background: #1c3254;
   border-radius: 8px;
   text-align: center;
   flex: 1 1 200px;
@@ -326,7 +335,8 @@ body {
 
 .card {
   flex: 1 1 250px;
-  background: #132d54;
+  /* Match the card-section background so prizes feel cohesive */
+  background: #1c3254;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -347,8 +357,8 @@ body {
 
 .sponsor {
   flex: 1 1 200px;
-  /* Updated card colour for sponsors */
-  background: #132d54;
+  /* Match sponsor cards to other card sections for consistency */
+  background: #1c3254;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -421,7 +431,8 @@ nav ul li a.active {
 
 
 .section.dark {
-  background: #152d4a;
+  /* Slightly lighter shade for dark sections to improve contrast */
+  background: #192e4e;
 }
 
 .section h2 {
@@ -475,6 +486,7 @@ nav ul li a.active {
 }
 
 .bullet-list li::before {
+  /* Use a bullet point (•) that is slightly larger and brightly coloured */
   content: '\2022';
   position: absolute;
   left: -12px;
@@ -497,6 +509,7 @@ nav ul li a.active {
 }
 
 .check-list li::before {
+  /* Use a check mark symbol for lists that represent completed items */
   content: '\2714';
   position: absolute;
   left: 0;
