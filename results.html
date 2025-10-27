@@ -39,34 +39,34 @@
 </section>
 
 <!-- Results section -->
-<section class="section card-section">
+<section class="section card-section fade-section">
   <div class="container">
     <h2>Event Results</h2>
     <p>The results of The Wasatch Yard will be posted here after the event concludes. Check back soon for final standings and lap counts!</p>
     <!-- Placeholder table to show how results could be structured -->
     <table style="width:100%; border-collapse: collapse; margin-top: 30px;">
       <thead>
-        <tr style="background:#1a365d; color:#F7F9FC;">
-          <th style="padding: 10px; border: 1px solid #112a44;">Rank</th>
-          <th style="padding: 10px; border: 1px solid #112a44;">Runner</th>
-          <th style="padding: 10px; border: 1px solid #112a44;">Laps Completed</th>
+        <tr style="background:#15294A; color:#F5F9FF;">
+          <th style="padding: 10px; border: 1px solid #11223B;">Rank</th>
+          <th style="padding: 10px; border: 1px solid #11223B;">Runner</th>
+          <th style="padding: 10px; border: 1px solid #11223B;">Laps Completed</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding: 10px; border: 1px solid #112a44;">1</td>
-          <td style="padding: 10px; border: 1px solid #112a44;">TBD</td>
-          <td style="padding: 10px; border: 1px solid #112a44;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">1</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #112a44;">2</td>
-          <td style="padding: 10px; border: 1px solid #112a44;">TBD</td>
-          <td style="padding: 10px; border: 1px solid #112a44;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">2</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #112a44;">3</td>
-          <td style="padding: 10px; border: 1px solid #112a44;">TBD</td>
-          <td style="padding: 10px; border: 1px solid #112a44;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">3</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
         </tr>
       </tbody>
     </table>
@@ -91,6 +91,22 @@
     <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Fade-in animation script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeEls = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+  });
+</script>
 
 </body>
 </html>

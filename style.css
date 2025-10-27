@@ -2,10 +2,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  /* Maintain a dark theme but lighten the base hue so text contrasts more strongly. */
-  background-color: #0B1A30;
-  /* Use a bright off‑white for text to improve readability on dark backgrounds. */
-  color: #F7F9FC;
+  /* Use a deeper slate background for a modern, luxurious feel. The darker hue
+     allows content cards to stand out while keeping the overall look refined. */
+  background-color: #071c2a;
+  /* Bright off‑white text for maximum readability */
+  color: #F5F9FF;
 }
 
 /* Generic card-style section with rounded corners and shadow for better separation.  
@@ -16,11 +17,14 @@ body {
 /* Card sections provide separation between content.  A subtly lighter shade
    helps the text stand out without losing the overall dark aesthetic. */
 .card-section {
-  background: #1a365d;
+  /* Lighten the card background slightly relative to the page for contrast.
+     This subtle slate blue gives each section a distinct "bubble" feel. */
+  background: #10263c;
   border-radius: 12px;
   padding: 40px;
-  margin: 80px 0;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  /* Reduce the vertical margin for a tighter layout */
+  margin: 60px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo container uses flex to align the icon and text */
@@ -82,8 +86,8 @@ body {
   top: 0;
   width: 100%;
   z-index: 100;
-  /* Lighten the navbar background and increase transparency for a modern look */
-  background: rgba(13, 27, 42, 0.85);
+  /* Dark translucent backdrop for a sleek floating header. */
+  background: rgba(7, 28, 42, 0.8);
   /* Reduce vertical padding on the navbar to decrease its overall height */
   padding: 2px 0;
 }
@@ -128,8 +132,9 @@ body {
 .hero {
   position: relative;
   /* Combine a subtle gradient overlay with a background image. Users can replace
-     `assets/hero.png` with their own photo to customise the hero section. */
-  background-image: linear-gradient(135deg, rgba(13,27,42,0.9) 0%, rgba(27,38,59,0.8) 50%, rgba(65,90,119,0.6) 100%), url('assets/hero.png');
+     `assets/hero.png` with their own photo to customise the hero section.  The
+     gradient has been darkened slightly for a more atmospheric feel. */
+  background-image: linear-gradient(135deg, rgba(7,28,42,0.9) 0%, rgba(17,40,68,0.8) 50%, rgba(34,68,104,0.6) 100%), url('assets/hero.png');
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -188,6 +193,8 @@ body {
   padding: 80px 0;
   /* reserve space for fixed navbar when navigating with anchors */
   scroll-margin-top: 80px;
+  /* Add smooth section transitions on scroll for a luxurious feel. */
+  transition: background-color 0.4s ease;
 }
 
 /* Smaller hero for secondary pages */
@@ -243,8 +250,8 @@ body {
 
 /* Stats section */
 .stats {
-  /* Use a slightly lighter shade behind the stats area to differentiate from card sections */
-  background: #142e52;
+  /* Deep slate background behind the stats area for contrast */
+  background: #071e2d;
   padding: 60px 0;
 }
 
@@ -256,8 +263,8 @@ body {
 }
 
 .stat {
-  /* Use the same card background as other card sections for visual harmony */
-  background: #1a365d;
+  /* Match the card section shade for visual harmony */
+  background: #10263c;
   border-radius: 8px;
   text-align: center;
   flex: 1 1 200px;
@@ -300,7 +307,7 @@ body {
   position: relative;
   height: 250px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #1B263B 0%, #0D1B2A 50%, #1B263B 100%);
+  background: linear-gradient(135deg, #0f2236 0%, #071c2a 50%, #0f2236 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,8 +346,8 @@ body {
 
 .card {
   flex: 1 1 250px;
-  /* Match the card-section background so prizes feel cohesive */
-  background: #1a365d;
+  /* Match the card section shade so prizes feel cohesive */
+  background: #10263c;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -361,8 +368,8 @@ body {
 
 .sponsor {
   flex: 1 1 200px;
-  /* Match sponsor cards to other card sections for consistency */
-  background: #1a365d;
+  /* Match sponsor cards to card sections for consistency */
+  background: #10263c;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -435,8 +442,8 @@ nav ul li a.active {
 
 
 .section.dark {
-  /* Slightly lighter shade for dark sections to improve contrast */
-  background: #1c3d69;
+  /* Deeper slate for dark sections */
+  background: #0a1f33;
 }
 
 .section h2 {
@@ -462,8 +469,8 @@ nav ul li a.active {
 .feature {
   flex: 1 1 200px;
   padding: 10px;
-  /* Lighten feature card background */
-  background: #153d6e;
+  /* Use a mid-tone slate for feature cards */
+  background: #0e2642;
   border-radius: 8px;
 }
 
@@ -550,4 +557,23 @@ nav ul li a.active {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+
+/* Event date styling below the hero title */
+.event-date {
+  font-size: 0.9rem;
+  color: #8FAAD2;
+  margin-top: 0.3rem;
+}
+
+/* Fade-in section animation for luxurious feel */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }

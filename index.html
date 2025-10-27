@@ -36,6 +36,8 @@
     <p class="location">Park City, Utah</p>
     <h1>The Wasatch Yard</h1>
     <p class="tagline">A backyard ultramarathon where endurance meets elevation. Run until you can't. Last one standing wins.</p>
+    <!-- Event date displayed under the tagline for quick reference -->
+    <p class="event-date">December 13, 2025 – 8:00 AM</p>
     <div class="countdown" id="countdown">
       <div class="count-item"><span id="days">00</span><span class="label">days</span></div>
       <div class="count-item"><span id="hours">00</span><span class="label">hours</span></div>
@@ -50,7 +52,7 @@
 </section>
 
 <!-- Stats section -->
-<section class="section card-section stats">
+<section class="section card-section stats fade-section">
   <div class="container stats-grid">
     <div class="stat">
       <div class="value">4.167</div>
@@ -68,7 +70,7 @@
 </section>
 
 <!-- Format section -->
-<section id="format" class="section card-section">
+<section id="format" class="section card-section fade-section">
   <div class="container format">
     <div class="format-text">
       <h2>The Format</h2>
@@ -91,7 +93,7 @@
 </section>
 
 <!-- Prizes section -->
-<section id="prizes" class="section dark card-section">
+<section id="prizes" class="section dark card-section fade-section">
   <div class="container">
     <h2>Lap‑Specific Prizes</h2>
     <p>We celebrate every milestone! Throughout the event, runners will have opportunities to win prizes at specific lap counts, encouraging endurance while keeping it inclusive and fun for all participants.</p>
@@ -113,7 +115,7 @@
 </section>
 
 <!-- Why section -->
-<section id="why" class="section card-section">
+<section id="why" class="section card-section fade-section">
   <div class="container">
     <h2>Why The Wasatch Yard?</h2>
     <p>More than just a race, it's an unforgettable experience in one of America's most beautiful mountain settings.</p>
@@ -143,7 +145,7 @@
 </section>
 
 <!-- Sponsors section -->
-<section id="sponsors" class="section dark card-section">
+<section id="sponsors" class="section dark card-section fade-section">
   <div class="container">
     <h2>Our Sponsors</h2>
     <p>Thank you to our amazing partners who make The Wasatch Yard possible</p>
@@ -157,7 +159,7 @@
 </section>
 
 <!-- Sponsor CTA section -->
-<section class="section card-section">
+<section class="section card-section fade-section">
   <div class="container sponsor-cta">
     <h2>Want to Be a Sponsor?</h2>
     <p>Join us in supporting this incredible event and the ultrarunning community. Sponsorship opportunities are available at various levels.</p>
@@ -166,7 +168,7 @@
 </section>
 
 <!-- Challenge section -->
-<section class="section dark card-section challenge">
+<section class="section dark card-section challenge fade-section">
   <div class="container">
     <h2>Are You Ready for the Challenge?</h2>
     <p>Join runners from across the country in this ultimate test of endurance and mental fortitude in the stunning mountains of Park City.</p>
@@ -220,6 +222,20 @@
     const timerId = setInterval(updateCountdown, 1000);
     updateCountdown();
   })();
+
+  // Fade-in on scroll using IntersectionObserver
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeEls = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+  });
 </script>
 
 </body>

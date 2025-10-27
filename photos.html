@@ -39,7 +39,7 @@
 </section>
 
 <!-- Photo gallery section -->
-<section class="section card-section">
+<section class="section card-section fade-section">
   <div class="container">
     <h2>Event Photos</h2>
     <p>Enjoy some snapshots from previous editions of The Wasatch Yard. Replace these placeholders with your own event photos!</p>
@@ -72,6 +72,22 @@
     <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Fade-in animation script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeEls = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+  });
+</script>
 
 </body>
 </html>
