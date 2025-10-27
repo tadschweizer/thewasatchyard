@@ -11,16 +11,18 @@
 <!-- Navigation bar -->
 <header class="navbar">
   <div class="container">
-    <div class="logo">The Wasatch Yard</div>
+    <div class="logo">
+      <!-- Simple mountain icon for the logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M4 56 L24 24 L32 36 L40 20 L60 56 Z" fill="#E63946" />
+      </svg>
+      The Wasatch Yard
+    </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="#format">Format</a></li>
-        <li><a href="#prizes">Prizes</a></li>
-        <li><a href="#why">Why</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a class="btn" href="https://example.com/registration" target="_blank">Register</a></li>
+        <li><a class="btn-nav" href="https://example.com/registration" target="_blank">Register</a></li>
       </ul>
     </nav>
   </div>
@@ -47,7 +49,7 @@
 </section>
 
 <!-- Stats section -->
-<section class="stats">
+<section class="section card-section stats">
   <div class="container stats-grid">
     <div class="stat">
       <div class="value">4.167</div>
@@ -65,14 +67,14 @@
 </section>
 
 <!-- Format section -->
-<section id="format" class="section">
+<section id="format" class="section card-section">
   <div class="container format">
     <div class="format-text">
       <h2>The Format</h2>
       <h3>What is a Backyard Ultra?</h3>
       <p>A backyard ultramarathon is a unique race format where runners complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
       <h4>Each lap contains:</h4>
-      <ul>
+      <ul class="bullet-list">
         <li>4.167 miles of mixed terrain trails</li>
         <li>Technical sections and mountain views</li>
         <li>Elevation changes through the course</li>
@@ -88,7 +90,7 @@
 </section>
 
 <!-- Prizes section -->
-<section id="prizes" class="section dark">
+<section id="prizes" class="section dark card-section">
   <div class="container">
     <h2>Lap‑Specific Prizes</h2>
     <p>We celebrate every milestone! Throughout the event, runners will have opportunities to win prizes at specific lap counts, encouraging endurance while keeping it inclusive and fun for all participants.</p>
@@ -110,24 +112,28 @@
 </section>
 
 <!-- Why section -->
-<section id="why" class="section">
+<section id="why" class="section card-section">
   <div class="container">
     <h2>Why The Wasatch Yard?</h2>
     <p>More than just a race, it's an unforgettable experience in one of America's most beautiful mountain settings.</p>
     <div class="features">
       <div class="feature">
+        <span class="icon">🌅</span>
         <h3>Start at Dawn</h3>
         <p>Begin your journey as the sun rises over the Wasatch mountains</p>
       </div>
       <div class="feature">
+        <span class="icon">⛰️</span>
         <h3>Mountain Air</h3>
         <p>Experience the crisp, refreshing air at high elevation</p>
       </div>
       <div class="feature">
+        <span class="icon">🤔</span>
         <h3>Mental Toughness</h3>
         <p>Challenge your limits and discover what you're truly capable of</p>
       </div>
       <div class="feature">
+        <span class="icon">🤝</span>
         <h3>Community</h3>
         <p>Join a supportive community of ultrarunners from across the country</p>
       </div>
@@ -136,7 +142,7 @@
 </section>
 
 <!-- Sponsors section -->
-<section id="sponsors" class="section dark">
+<section id="sponsors" class="section dark card-section">
   <div class="container">
     <h2>Our Sponsors</h2>
     <p>Thank you to our amazing partners who make The Wasatch Yard possible</p>
@@ -150,7 +156,7 @@
 </section>
 
 <!-- Sponsor CTA section -->
-<section class="section">
+<section class="section card-section">
   <div class="container sponsor-cta">
     <h2>Want to Be a Sponsor?</h2>
     <p>Join us in supporting this incredible event and the ultrarunning community. Sponsorship opportunities are available at various levels.</p>
@@ -159,7 +165,7 @@
 </section>
 
 <!-- Challenge section -->
-<section class="section dark challenge">
+<section class="section dark card-section challenge">
   <div class="container">
     <h2>Are You Ready for the Challenge?</h2>
     <p>Join runners from across the country in this ultimate test of endurance and mental fortitude in the stunning mountains of Park City.</p>
