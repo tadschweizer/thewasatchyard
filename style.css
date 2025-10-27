@@ -1,0 +1,406 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #0D1B2A;
+  color: #E0E1DD;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(13, 27, 42, 0.9);
+  padding: 10px 0;
+}
+
+.navbar .logo {
+  color: #E0E1DD;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.navbar nav {
+  float: right;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: #E0E1DD;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a.btn {
+  background: #E63946;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.hero {
+  position: relative;
+  /* Use a dark gradient for the hero background instead of an external image. */
+  background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #415A77 100%);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #E63946;
+  color: #fff;
+}
+
+.btn-secondary {
+  border: 1px solid #E63946;
+  color: #E63946;
+}
+
+.section {
+  padding: 80px 0;
+  /* reserve space for fixed navbar when navigating with anchors */
+  scroll-margin-top: 80px;
+}
+
+/* Smaller hero for secondary pages */
+.small-hero {
+  height: 50vh;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+/* Location and tagline in hero */
+.hero .location {
+  font-size: 1rem;
+  color: #E63946;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero .tagline {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Countdown timer */
+.countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.count-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count-item span {
+  display: block;
+}
+
+.count-item span:first-child {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E63946;
+}
+
+.count-item .label {
+  font-size: 0.8rem;
+  color: #E0E1DD;
+  margin-top: 0.2rem;
+}
+
+/* Stats section */
+.stats {
+  background: #1B263B;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.stat {
+  background: #0D1B2A;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1 1 200px;
+  padding: 20px;
+}
+
+.stat .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E63946;
+}
+
+.stat .label {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #E0E1DD;
+}
+
+/* Format section layout */
+.format {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.format-text {
+  flex: 1 1 55%;
+}
+
+.format-text h3,
+.format-text h4 {
+  margin-top: 1rem;
+  color: #E63946;
+}
+
+.format-image {
+  flex: 1 1 35%;
+  /* Use a fixed height and a gradient background instead of an external image. */
+  position: relative;
+  height: 250px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1B263B 0%, #0D1B2A 50%, #1B263B 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.format-image img {
+  /* Remove the image element since the section now uses a gradient background. */
+  display: none;
+}
+
+.lap-time {
+  /* Center the lap time in the new gradient container */
+  position: relative;
+  background: rgba(230, 57, 70, 0.85);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.lap-time .label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+
+/* Cards for prizes */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: #0D1B2A;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #E63946;
+}
+
+/* Sponsor grid */
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sponsor {
+  flex: 1 1 200px;
+  background: #0D1B2A;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E63946;
+}
+
+.sponsor span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #E0E1DD;
+  font-weight: normal;
+}
+
+/* Sponsor call-to-action */
+.sponsor-cta {
+  text-align: center;
+}
+
+/* Challenge section */
+.challenge {
+  text-align: center;
+}
+
+/* Footer styles */
+.footer {
+  background: #0D1B2A;
+  color: #E0E1DD;
+  padding: 40px 0 20px;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-info {
+  flex: 1 1 300px;
+}
+
+.footer-links {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links a {
+  color: #E0E1DD;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Warning text */
+.warning {
+  color: #E63946;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Active nav link styling */
+nav ul li a.active {
+  color: #E63946;
+  border-bottom: 2px solid #E63946;
+}
+
+
+.section.dark {
+  background: #1B263B;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.info-list li {
+  margin-bottom: 0.5rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  flex: 1 1 200px;
+  padding: 10px;
+  background: #0D1B2A;
+  border-radius: 8px;
+}
+
+.feature h3 {
+  margin-top: 0;
+  color: #E63946;
+}
+
+.footer {
+  background: #0D1B2A;
+  text-align: center;
+  padding: 20px 0;
+}
