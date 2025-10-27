@@ -11,16 +11,18 @@
 <!-- Navigation bar -->
 <header class="navbar">
   <div class="container">
-    <div class="logo">The Wasatch Yard</div>
+    <div class="logo">
+      <!-- Simple mountain icon for the logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M4 56 L24 24 L32 36 L40 20 L60 56 Z" fill="#E63946" />
+      </svg>
+      The Wasatch Yard
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="race-info.html" class="active">Race Info</a></li>
-        <li><a href="#rules">Rules</a></li>
-        <li><a href="#location">Location</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#support">Aid & Support</a></li>
-        <li><a class="btn" href="https://example.com/registration" target="_blank">Register</a></li>
+        <li><a class="btn-nav" href="https://example.com/registration" target="_blank">Register</a></li>
       </ul>
     </nav>
   </div>
@@ -36,7 +38,7 @@
 </section>
 
 <!-- Complete guide section -->
-<section class="section">
+<section class="section card-section">
   <div class="container">
     <h2>Complete Race Guide</h2>
     <p>Below you'll find everything you need to know about The Wasatch Yard. You can print this page or save it as a PDF for your convenience.</p>
@@ -45,12 +47,12 @@
 </section>
 
 <!-- Format section -->
-<section id="format" class="section dark">
+<section id="format" class="section dark card-section">
   <div class="container">
     <h2>The Backyard Ultra Format</h2>
     <p>A backyard ultra is an ultramarathon race where competitors must complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
     <h3>Each lap contains:</h3>
-    <ul>
+    <ul class="bullet-list">
       <li>4.167 miles of mixed terrain (one yard = 100 miles in 24 hours)</li>
       <li>Technical trail sections with rocks and roots</li>
       <li>Scenic mountain views throughout</li>
@@ -61,10 +63,10 @@
 </section>
 
 <!-- Rules section -->
-<section id="rules" class="section">
+<section id="rules" class="section card-section">
   <div class="container">
     <h2>The Rules</h2>
-    <ul>
+    <ul class="check-list">
       <li>Each loop must be completed in under 60 minutes</li>
       <li>All runners start together at the beginning of each hour (the "whistle")</li>
       <li>Your rest time is whatever remains of the hour after finishing the lap</li>
@@ -76,7 +78,7 @@
 </section>
 
 <!-- Location & Course section -->
-<section id="location" class="section dark">
+<section id="location" class="section dark card-section">
   <div class="container">
     <h2>Location &amp; Course</h2>
     <p><strong>Start/Finish:</strong> Mountain Resort Base, Park City, Utah</p>
@@ -86,22 +88,22 @@
 </section>
 
 <!-- Schedule section -->
-<section id="schedule" class="section">
+<section id="schedule" class="section card-section">
   <div class="container">
     <h2>Schedule</h2>
     <p><strong>Race Day:</strong> Saturday, July 15th</p>
-    <p><strong>Check‑in:</strong> 4:00 AM&nbsp;–&nbsp;5:30 AM</p>
+    <p><strong>Check‑in:</strong> 4:00 AM – 5:30 AM</p>
     <p><strong>First Whistle:</strong> 6:00 AM sharp</p>
     <p><strong>Duration:</strong> Until one runner remains</p>
   </div>
 </section>
 
 <!-- Strategy section -->
-<section id="strategy" class="section dark">
+<section id="strategy" class="section dark card-section">
   <div class="container">
     <h2>Lap Timing &amp; Strategy</h2>
     <p>The backyard ultra format is as much mental as it is physical. Here's what makes it unique:</p>
-    <ul>
+    <ul class="bullet-list">
       <li>Faster runners have more rest: complete the lap in 45 minutes, rest for 15 minutes</li>
       <li>No set finish time: the race could last 12 hours or 48+ hours</li>
       <li>Night running: bring headlamps and be prepared for darkness</li>
@@ -112,11 +114,11 @@
 </section>
 
 <!-- Support section -->
-<section id="support" class="section">
+<section id="support" class="section card-section">
   <div class="container">
     <h2>Aid Station &amp; Support</h2>
     <p>A fully stocked aid station will be available at the start/finish area between laps.</p>
-    <ul>
+    <ul class="check-list">
       <li>Water and electrolyte drinks</li>
       <li>Energy gels, bars, and real food options</li>
       <li>Medical support on site 24/7</li>
