@@ -404,3 +404,75 @@ nav ul li a.active {
   text-align: center;
   padding: 20px 0;
 }
+
+/* === Custom overrides for improved design === */
+.card-section {
+  background: #112c44;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 80px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.feature .icon {
+  font-size: 2rem;
+  color: #E63946;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.bullet-list {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 3px solid #E63946;
+}
+
+.bullet-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.bullet-list li::before {
+  content: '\\2022';
+  position: absolute;
+  left: -12px;
+  color: #E63946;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.check-list {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.check-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.check-list li::before {
+  content: '\\2714';
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.warning {
+  border-left: 3px solid #E63946;
+  background: rgba(230, 57, 70, 0.1);
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: #E63946;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+}
