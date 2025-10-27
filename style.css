@@ -2,10 +2,10 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  /* Maintain a dark background but use a slightly deeper hue for richness */
-  background-color: #0D1B2A;
-  /* Increase contrast by brightening the default text colour */
-  color: #F0F4F8;
+  /* Maintain a dark theme but lighten the base hue so text contrasts more strongly. */
+  background-color: #0B1A30;
+  /* Use a bright off‑white for text to improve readability on dark backgrounds. */
+  color: #F7F9FC;
 }
 
 /* Generic card-style section with rounded corners and shadow for better separation.  
@@ -13,8 +13,10 @@ body {
 /* Card sections provide separation between content. Use a slightly lighter
    navy shade to help the text stand out without losing the overall dark
    aesthetic. */
+/* Card sections provide separation between content.  A subtly lighter shade
+   helps the text stand out without losing the overall dark aesthetic. */
 .card-section {
-  background: #1c3254;
+  background: #1a365d;
   border-radius: 12px;
   padding: 40px;
   margin: 80px 0;
@@ -29,12 +31,12 @@ body {
 
 /* Size and spacing for the logo icon */
 /* Shrink the logo icon so the header doesn't dominate the top of the page */
-.navbar .logo svg {
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
+ .navbar .logo svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
   flex-shrink: 0;
-}
+ }
 
 /* Navigation button used for the register call‑to‑action */
 .navbar a.btn-nav {
@@ -55,17 +57,18 @@ body {
 }
 
 /* Spacing between each nav list item */
+/* Bring items closer together to reduce overall header width */
 .navbar li {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 /* Base styles for nav links */
 .navbar li a {
-  color: #F0F4F8;
+  color: #F7F9FC;
   text-decoration: none;
   font-weight: 500;
   display: block;
-  padding: 6px;
+  padding: 4px 6px;
 }
 
 .container {
@@ -79,16 +82,17 @@ body {
   top: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(13, 27, 42, 0.9);
+  /* Lighten the navbar background and increase transparency for a modern look */
+  background: rgba(13, 27, 42, 0.85);
   /* Reduce vertical padding on the navbar to decrease its overall height */
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
 .navbar .logo {
   color: #F5F6F8;
   font-weight: bold;
   /* Reduce the logo text size further to keep the header compact */
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   display: inline-block;
 }
 
@@ -239,8 +243,8 @@ body {
 
 /* Stats section */
 .stats {
-  /* Use a lighter shade behind the stats area to differentiate from card sections */
-  background: #112a44;
+  /* Use a slightly lighter shade behind the stats area to differentiate from card sections */
+  background: #142e52;
   padding: 60px 0;
 }
 
@@ -253,7 +257,7 @@ body {
 
 .stat {
   /* Use the same card background as other card sections for visual harmony */
-  background: #1c3254;
+  background: #1a365d;
   border-radius: 8px;
   text-align: center;
   flex: 1 1 200px;
@@ -336,7 +340,7 @@ body {
 .card {
   flex: 1 1 250px;
   /* Match the card-section background so prizes feel cohesive */
-  background: #1c3254;
+  background: #1a365d;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -358,7 +362,7 @@ body {
 .sponsor {
   flex: 1 1 200px;
   /* Match sponsor cards to other card sections for consistency */
-  background: #1c3254;
+  background: #1a365d;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -432,7 +436,7 @@ nav ul li a.active {
 
 .section.dark {
   /* Slightly lighter shade for dark sections to improve contrast */
-  background: #192e4e;
+  background: #1c3d69;
 }
 
 .section h2 {
@@ -459,7 +463,7 @@ nav ul li a.active {
   flex: 1 1 200px;
   padding: 10px;
   /* Lighten feature card background */
-  background: #132d54;
+  background: #153d6e;
   border-radius: 8px;
 }
 
@@ -513,7 +517,7 @@ nav ul li a.active {
   content: '\2714';
   position: absolute;
   left: 0;
-  color: #2ecc71;
+  color: #00c853;
   font-weight: bold;
 }
 
