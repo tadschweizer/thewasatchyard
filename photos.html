@@ -12,17 +12,15 @@
 <header class="navbar">
   <div class="container">
     <div class="logo">
-      <!-- Simple mountain icon for the logo -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M4 56 L24 24 L32 36 L40 20 L60 56 Z" fill="#E63946" />
-      </svg>
+      <img src="assets/logo.png" alt="The Wasatch Yard logo">
       The Wasatch Yard
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="race-info.html">Race Info</a></li>
-        <!-- Hide the Photos and Results links from the nav bar to keep it minimal. -->
+        <li><a href="photos.html" class="active">Photos</a></li>
+        <li><a href="results.html">Results</a></li>
         <li><a class="btn-nav" href="https://example.com/registration" target="_blank">Register</a></li>
       </ul>
     </nav>
@@ -51,6 +49,20 @@
       <img src="assets/placeholder.png" alt="Photo 5">
       <img src="assets/placeholder.png" alt="Photo 6">
     </div>
+  </div>
+</section>
+
+<!-- Contact Us section -->
+<section class="section contact-section fade-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Have a great photo to share or a question about The Wasatch Yard? Reach out below.</p>
+    <form class="contact-form" action="mailto:tadschweizer@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </section>
 

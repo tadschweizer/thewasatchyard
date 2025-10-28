@@ -12,17 +12,15 @@
 <header class="navbar">
   <div class="container">
     <div class="logo">
-      <!-- Simple mountain icon for the logo -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M4 56 L24 24 L32 36 L40 20 L60 56 Z" fill="#E63946" />
-      </svg>
+      <img src="assets/logo.png" alt="The Wasatch Yard logo">
       The Wasatch Yard
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="race-info.html" class="active">Race Info</a></li>
-        <!-- Simplified header: no photos or results links in the nav bar -->
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="results.html">Results</a></li>
         <li><a class="btn-nav" href="https://example.com/registration" target="_blank">Register</a></li>
       </ul>
     </nav>
@@ -36,16 +34,17 @@
     <h1>Race Information</h1>
     <p>Everything you need to know about The Wasatch Yard</p>
     <!-- Display the event date here as well for quick reference on the info page -->
-    <p class="event-date">December 13, 2025 – 8:00 AM</p>
+    <p class="event-date">December 13, 2025 – 7:00 PM</p>
   </div>
 </section>
+
 
 <!-- Complete guide section -->
 <section class="section card-section fade-section">
   <div class="container">
     <h2>Complete Race Guide</h2>
     <p>Below you'll find everything you need to know about The Wasatch Yard. You can print this page or save it as a PDF for your convenience.</p>
-    <!-- Note: Additional printable guides can be provided later. -->
+    <a class="btn-primary" href="https://docs.google.com/document/d/1tcyaa-qYs0_wZOSY09BtnZJSuZXXOMXLKfplL7MV-JA/edit?usp=sharing" target="_blank">View Race Guide</a>
   </div>
 </section>
 
@@ -56,7 +55,7 @@
     <p>A backyard ultra is an ultramarathon race where competitors must complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
     <h3>Each lap contains:</h3>
     <ul class="bullet-list">
-      <li>4.167 miles of mixed terrain (one yard = 100 miles in 24 hours)</li>
+      <li>4.167 miles of mixed terrain (one yard every hour = 100 miles in 24 hours)</li>
       <li>Technical trail sections with rocks and roots</li>
       <li>Scenic mountain views throughout</li>
       <li>Single‑track and wider trail combinations</li>
@@ -94,10 +93,19 @@
 <section id="schedule" class="section card-section fade-section">
   <div class="container">
     <h2>Schedule</h2>
-    <p><strong>Race Day:</strong> Saturday, July 15th</p>
-    <p><strong>Check‑in:</strong> 4:00 AM&nbsp;–&nbsp;5:30 AM</p>
-    <p><strong>First Whistle:</strong> 6:00 AM sharp</p>
+    <p><strong>Race Day:</strong> Saturday, December 13th, 2025</p>
+    <p><strong>Check‑in:</strong> 5:00 PM&nbsp;–&nbsp;6:30 PM</p>
+    <p><strong>First Whistle:</strong> 7:00 PM sharp</p>
     <p><strong>Duration:</strong> Until one runner remains</p>
+  </div>
+</section>
+
+<!-- Route section -->
+<section id="route" class="section dark card-section fade-section">
+  <div class="container">
+    <h2>Route</h2>
+    <p>Explore the course route for The Wasatch Yard. A detailed map of the loop will be added here soon.</p>
+    <div class="route-placeholder">Course map will be available soon.</div>
   </div>
 </section>
 
@@ -128,6 +136,20 @@
       <li>Dedicated crew area for personal support teams</li>
       <li>Covered rest area with seating</li>
     </ul>
+  </div>
+</section>
+
+<!-- Contact Us section -->
+<section class="section contact-section fade-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Need more details? Send us a message and we'll be in touch.</p>
+    <form class="contact-form" action="mailto:tadschweizer@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </section>
 
