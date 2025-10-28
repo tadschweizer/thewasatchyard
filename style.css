@@ -4,7 +4,8 @@ body {
   line-height: 1.6;
   /* Use a deeper slate background for a modern, luxurious feel. The darker hue
      allows content cards to stand out while keeping the overall look refined. */
-  background-color: #071c2a;
+  /* Update to a deep slate (#161621) for a rich, modern backdrop */
+  background-color: #161621;
   /* Bright off‑white text for maximum readability */
   color: #F5F9FF;
 }
@@ -16,10 +17,12 @@ body {
    aesthetic. */
 /* Card sections provide separation between content.  A subtly lighter shade
    helps the text stand out without losing the overall dark aesthetic. */
+/* Generic card-style section with rounded corners and shadow for better separation. */
 .card-section {
   /* Lighten the card background slightly relative to the page for contrast.
      This subtle slate blue gives each section a distinct "bubble" feel. */
-  background: #10263c;
+  /* Lighten cards relative to the page for contrast */
+  background: #1e233a;
   border-radius: 12px;
   padding: 40px;
   /* Reduce the vertical margin for a tighter layout */
@@ -250,8 +253,8 @@ body {
 
 /* Stats section */
 .stats {
-  /* Deep slate background behind the stats area for contrast */
-  background: #071e2d;
+  /* Slightly darker background behind the stats area for contrast */
+  background: #14182c;
   padding: 60px 0;
 }
 
@@ -557,6 +560,80 @@ nav ul li a.active {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+
+/* Contact section styling */
+.contact-section {
+  /* Use the same bubble styling as card sections */
+  background: #1e233a;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 60px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.contact-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #E63946;
+  font-size: 1.8rem;
+}
+.contact-section p {
+  margin-bottom: 1rem;
+  color: #E0E1DD;
+}
+.contact-form {
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #264066;
+  background: #0d1d33;
+  color: #F5F9FF;
+  font-size: 1rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6c7a99;
+}
+.contact-form button {
+  background: #E63946;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background: #c72f3d;
+}
+
+/* Route placeholder styling */
+.route-placeholder {
+  background: #0d1d33;
+  border: 2px dashed #264066;
+  border-radius: 8px;
+  padding: 40px;
+  color: #6c7a99;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Adjust logo image dimensions */
+.navbar .logo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  flex-shrink: 0;
 }
 
 /* Event date styling below the hero title */
