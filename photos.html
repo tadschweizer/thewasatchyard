@@ -4,102 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Wasatch Yard – Photos</title>
+  <link rel="canonical" href="https://wasatchyard.com/">
+  <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navigation bar -->
 <header class="navbar">
-  <div class="container">
-    <div class="logo">
-      <img src="assets/logo.png" alt="The Wasatch Yard logo">
-      The Wasatch Yard
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="photos.html" class="active">Photos</a></li>
-        <li><a href="results.html">Results</a></li>
-        <li><a class="btn-nav" href="https://example.com/registration" target="_blank">Register</a></li>
-      </ul>
+  <div class="container navwrap">
+    <a class="logo" href="/">
+      <img src="assets/logo.png" alt="The Wasatch Yard logo" onerror="this.style.display='none'"><span>The Wasatch Yard</span>
+    </a>
+    <button class="hamburger" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')"><span></span><span></span><span></span></button>
+    <nav class="mainnav">
+      <a href="index.html">Home</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="photos.html" class="active">Photos</a>
+      <a href="results.html">Results</a>
+      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
+      <form class="nav-search" action="https://www.google.com/search" method="get">
+        <input type="hidden" name="q" value="site:wasatchyard.com">
+        <input name="q" placeholder="Search site" aria-label="Search">
+      </form>
     </nav>
   </div>
 </header>
 
-<!-- Hero section for photos -->
-<section class="hero small-hero">
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Photo Gallery</h1>
-    <p>Snapshots from The Wasatch Yard</p>
+<section class="hero small">
+  <div class="container">
+    <h1>Photos</h1>
+    <p>Drop in your event images. These are placeholders.</p>
   </div>
 </section>
 
-<!-- Photo gallery section -->
-<section class="section card-section fade-section">
+<section class="fade">
   <div class="container">
-    <h2>Event Photos</h2>
-    <p>Enjoy some snapshots from previous editions of The Wasatch Yard. Replace these placeholders with your own event photos!</p>
-    <div class="gallery-grid">
-      <img src="assets/placeholder.png" alt="Photo 1">
-      <img src="assets/placeholder.png" alt="Photo 2">
-      <img src="assets/placeholder.png" alt="Photo 3">
-      <img src="assets/placeholder.png" alt="Photo 4">
-      <img src="assets/placeholder.png" alt="Photo 5">
-      <img src="assets/placeholder.png" alt="Photo 6">
+    <div class="gallery">
+      <img src="assets/placeholder.png" alt="placeholder">
+      <img src="assets/placeholder.png" alt="placeholder">
+      <img src="assets/placeholder.png" alt="placeholder">
+      <img src="assets/placeholder.png" alt="placeholder">
+      <img src="assets/placeholder.png" alt="placeholder">
+      <img src="assets/placeholder.png" alt="placeholder">
     </div>
   </div>
 </section>
 
-<!-- Contact Us section -->
-<section class="section contact-section fade-section">
+<section class="contact fade">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Have a great photo to share or a question about The Wasatch Yard? Reach out below.</p>
-    <form class="contact-form" action="mailto:tadschweizer@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h2>Share a Photo</h2>
+    <form action="https://formspree.io/f/xldobnzq" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="4" placeholder="Link to photo / message" required></textarea>
+      <button type="submit" class="btn">Send</button>
     </form>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-info">
-      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
-      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
+    <div class="footer-left">
+      <p>Park City, Utah • Backyard Ultra</p>
+      <p><a href="https://ultrasignup.com/entrants_event.aspx?did=131654" target="_blank" rel="noopener">Registered Entrants</a></p>
     </div>
-    <div class="footer-links">
+    <div class="footer-right">
       <a href="index.html">Home</a>
       <a href="race-info.html">Race Info</a>
+      <a href="photos.html">Photos</a>
       <a href="results.html">Results</a>
-      <a href="https://example.com/registration" target="_blank">Register Now</a>
+      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
     </div>
   </div>
-  <div class="container">
-    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
-  </div>
+  <div class="copyright">© 2025 The Wasatch Yard</div>
 </footer>
-
-<!-- Fade-in animation script -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(function(el) { observer.observe(el); });
-  });
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:0.08});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 </script>
-
 </body>
 </html>

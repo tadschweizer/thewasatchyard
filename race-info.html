@@ -4,189 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Wasatch Yard – Race Info</title>
+  <link rel="canonical" href="https://wasatchyard.com/">
+  <link rel="icon" href="assets/favicon.png">
+  <meta name="description" content="Backyard ultra race info for The Wasatch Yard in Park City, UT.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Navigation bar -->
 <header class="navbar">
-  <div class="container">
-    <div class="logo">
-      <img src="assets/logo.png" alt="The Wasatch Yard logo">
-      The Wasatch Yard
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="race-info.html" class="active">Race Info</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="results.html">Results</a></li>
-        <li><a class="btn-nav" href="https://example.com/registration" target="_blank">Register</a></li>
-      </ul>
+  <div class="container navwrap">
+    <a class="logo" href="/">
+      <img src="assets/logo.png" alt="The Wasatch Yard logo" onerror="this.style.display='none'"><span>The Wasatch Yard</span>
+    </a>
+    <button class="hamburger" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')"><span></span><span></span><span></span></button>
+    <nav class="mainnav">
+      <a href="index.html">Home</a>
+      <a href="race-info.html" class="active">Race Info</a>
+      <a href="photos.html">Photos</a>
+      <a href="results.html">Results</a>
+      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
+      <form class="nav-search" action="https://www.google.com/search" method="get">
+        <input type="hidden" name="q" value="site:wasatchyard.com">
+        <input name="q" placeholder="Search site" aria-label="Search">
+      </form>
     </nav>
   </div>
 </header>
 
-<!-- Hero section for race info -->
-<section class="hero small-hero">
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Race Information</h1>
-    <p>Everything you need to know about The Wasatch Yard</p>
-    <!-- Display the event date here as well for quick reference on the info page -->
-    <p class="event-date">December 13, 2025 – 7:00 PM</p>
+<section class="hero small">
+  <div class="container">
+    <h1>Race Info</h1>
+    <p class="event-datetime">Starts Friday, December 5, 2025 • 7:00 PM</p>
   </div>
 </section>
 
-
-<!-- Complete guide section -->
-<section class="section card-section fade-section">
-  <div class="container">
-    <h2>Complete Race Guide</h2>
-    <p>Below you'll find everything you need to know about The Wasatch Yard. You can print this page or save it as a PDF for your convenience.</p>
-    <a class="btn-primary" href="https://docs.google.com/document/d/1tcyaa-qYs0_wZOSY09BtnZJSuZXXOMXLKfplL7MV-JA/edit?usp=sharing" target="_blank">View Race Guide</a>
-  </div>
-</section>
-
-<!-- Format section -->
-<section id="format" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>The Backyard Ultra Format</h2>
-    <p>A backyard ultra is an ultramarathon race where competitors must complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
-    <h3>Each lap contains:</h3>
-    <ul class="bullet-list">
-      <li>4.167 miles of mixed terrain (one yard every hour = 100 miles in 24 hours)</li>
-      <li>Technical trail sections with rocks and roots</li>
-      <li>Scenic mountain views throughout</li>
-      <li>Single‑track and wider trail combinations</li>
-      <li>Aid station access at start/finish</li>
+<section class="fade">
+  <div class="container narrow">
+    <h2>Backyard Ultra Format</h2>
+    <p>Each hour you must complete one 4.167-mile loop. Whatever time remains is your rest. Miss the start or fail to finish within 60:00 and you're out.</p>
+    <ul>
+      <li>Mixed terrain with technical sections</li>
+      <li>Elevation changes throughout the loop</li>
+      <li>Aid station at start/finish</li>
     </ul>
   </div>
 </section>
 
-<!-- Rules section -->
-<section id="rules" class="section card-section fade-section">
-  <div class="container">
-    <h2>The Rules</h2>
-    <ul class="check-list">
-      <li>Each loop must be completed in under 60 minutes</li>
-      <li>All runners start together at the beginning of each hour (the "whistle")</li>
-      <li>Your rest time is whatever remains of the hour after finishing the lap</li>
-      <li>Miss the start of an hour (DNF) or fail to complete a lap in time and you're eliminated</li>
-      <li>The race ends when only one runner completes a lap that no one else finishes</li>
-      <li>Lap‑specific prizes awarded throughout the day to celebrate milestones</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Location & Course section -->
-<section id="location" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>Location &amp; Course</h2>
-    <p><strong>Start/Finish:</strong> Mountain Resort Base, Park City, Utah</p>
-    <p><strong>Course Details:</strong> 4.167 miles per lap on mixed terrain trails with stunning mountain views</p>
-    <p><strong>Terrain Type:</strong> Technical sections, single‑track, and wider trails with natural obstacles</p>
-  </div>
-</section>
-
-<!-- Schedule section -->
-<section id="schedule" class="section card-section fade-section">
-  <div class="container">
+<section class="fade">
+  <div class="container narrow">
     <h2>Schedule</h2>
-    <p><strong>Race Day:</strong> Saturday, December 13th, 2025</p>
-    <p><strong>Check‑in:</strong> 5:00 PM&nbsp;–&nbsp;6:30 PM</p>
-    <p><strong>First Whistle:</strong> 7:00 PM sharp</p>
-    <p><strong>Duration:</strong> Until one runner remains</p>
-  </div>
-</section>
-
-<!-- Route section -->
-<section id="route" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>Route</h2>
-    <p>Explore the course route for The Wasatch Yard. A detailed map of the loop will be added here soon.</p>
-    <div class="route-placeholder">Course map will be available soon.</div>
-  </div>
-</section>
-
-<!-- Strategy section -->
-<section id="strategy" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>Lap Timing &amp; Strategy</h2>
-    <p>The backyard ultra format is as much mental as it is physical. Here's what makes it unique:</p>
-    <ul class="bullet-list">
-      <li>Faster runners have more rest: complete the lap in 45 minutes, rest for 15 minutes</li>
-      <li>No set finish time: the race could last 12 hours or 48+ hours</li>
-      <li>Night running: bring headlamps and be prepared for darkness</li>
-      <li>Crew support: use your rest time wisely for nutrition, gear changes, and recovery</li>
-    </ul>
-    <p class="warning">Important: The mountain terrain and unique format make this extremely challenging. Proper training, mental preparation, and a solid support crew are essential. Most runners will not finish beyond 12–24 hours.</p>
-  </div>
-</section>
-
-<!-- Support section -->
-<section id="support" class="section card-section fade-section">
-  <div class="container">
-    <h2>Aid Station &amp; Support</h2>
-    <p>A fully stocked aid station will be available at the start/finish area between laps.</p>
-    <ul class="check-list">
-      <li>Water and electrolyte drinks</li>
-      <li>Energy gels, bars, and real food options</li>
-      <li>Medical support on site 24/7</li>
-      <li>Dedicated crew area for personal support teams</li>
-      <li>Covered rest area with seating</li>
+    <ul>
+      <li><strong>Check-in:</strong> 5:00–6:30 PM</li>
+      <li><strong>First whistle:</strong> 7:00 PM sharp</li>
+      <li><strong>Duration:</strong> until one runner remains</li>
     </ul>
   </div>
 </section>
 
-<!-- Contact Us section -->
-<section class="section contact-section fade-section">
+<section class="contact fade">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Need more details? Send us a message and we'll be in touch.</p>
-    <form class="contact-form" action="mailto:tadschweizer@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xldobnzq" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn">Send</button>
     </form>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-info">
-      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
-      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
+    <div class="footer-left">
+      <p>Park City, Utah • Backyard Ultra</p>
+      <p><a href="https://ultrasignup.com/entrants_event.aspx?did=131654" target="_blank" rel="noopener">Registered Entrants</a></p>
     </div>
-    <div class="footer-links">
+    <div class="footer-right">
       <a href="index.html">Home</a>
+      <a href="race-info.html">Race Info</a>
       <a href="photos.html">Photos</a>
       <a href="results.html">Results</a>
-      <a href="https://example.com/registration" target="_blank">Register Now</a>
+      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
     </div>
   </div>
-  <div class="container">
-    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
-  </div>
+  <div class="copyright">© 2025 The Wasatch Yard</div>
 </footer>
-
-<!-- Fade-in animation script -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(function(el) { observer.observe(el); });
-  });
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:0.08});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 </script>
-
 </body>
 </html>
