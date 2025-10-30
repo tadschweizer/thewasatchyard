@@ -1,1 +1,483 @@
-/**\n * Custom styles for The Wasatch Yard... abridged for mobile nav, sponsors, the 60:00 badge and photo background */\n:root{\n  --bg:#0b1426;\n  --panel:#101e38;\n  --text:#e9f0ff;\n  --muted:#9bb0d3;\n  --accent:#4ea1ff;\n  --accent-2:#82f3c3;\n}\n\n*{box-sizing:border-box}\nbody{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}\na;color:var(--accent);text-decoration:none\n.container{width:min(1100px,92%);margin:0 auto}\n.navbar{position:sticky;top:0;background:rgba(11,16,38,.8);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid #0f1d35;}\n.navwrap{display:flex;align-items:center;gap:16px;padding:10px 0}\n.logo{display:flex;align-items:center;gap:10px;color:var(--text);font-weight:700}\n.logo imkheight:28px}\n.mainnav{display:flex;align-items:center;gap:18px;margin-left:auto}\n.mainnav .btn{padding:.55rem .9rem;background:var(--accent);color:#081427;border-radius:12px;font-weight:700}\n.nav-search{display:flex;align-items:center;border:1px solid #1f355f;border-radius:12px;padding:2px 8px}\n.nav-search input{blackground:transparent;border:0;outline:0;color:var(--text);min-width:140px}\n.hamburger{display:none;border:0background:transparent;color:var(--text);cursor:pointer}\n.hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:4px 0}\n\n.hero{padding:72px 0;background:linear-gradient(180deg,#0c1933,transparent)}\n.hero.small{padding:56px 0}\nh1{font-size:clamp(28px,3.5vw,42px);margin:.2rem 0 .6rem}\n.event-datetime{color:var(--muted);margin-bottom:18px}\n.countdown{display:flex;gap:14px;margin:18px 0 10px}\n.countdown div{background:var(--panel);border:1px solid #13254a;border-radius:14px;padding:10px 14px;text-align:center}\n.countdown span{font-size:28px;font-weight:800;display:block}\n.countdown label{font-size:12px;color:var(--muted)}\n\n.btn{display:inline-block;padding:.7rem 1.1rem;border-radius:12px;background:var(--accent);color:#081427;font-weight:700}\n.btn.ghost{background:transparent;border:1px solid #284b86;color:var(--text)}\n\n.section{padding:58px 0}\n.format-card{position:relative;display:grid;grid-template-columns:1rf;gap:18px;background:var(--panel);border:1px solid #13254a;border-radius:18px;padding:22px;overflow:hidden}\n.lap-bg{position:absolute;inset:0;background:url('assets/lap-bg.png') center/cover no-repeat;opacity.25;filter:contrast(1.1) saturate(1.1)}\n.lap-badge{position:absolute;left:18px;bottom:18px;background:rgba(8,20,39,.9);border:1px solid #203457;border-radius:14px;padding:10px 14px}\n.lap-badge strong{font-size:28px;display:block}.lap-badge span{font-size:12px;color:var(--muted)}\n.format-text{position:relative}\n\n.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}\n.why-item{background:var(--panel);border:1px solid #13254a;border-radius:18px;padding:18px}\n.why-item h3{margin:.2rem 0 .4rem}\n\n.sponsor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}\n.sponsor-grid img{width:100%;height:72px;object-fit:contain;background:#0d1a31;border:1px solid #13254a;border-radius:14px;padding:8px}\n\n.galler{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}\n.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid #13254a;}\n\n.contact-form{display:grid;gap:10px;max-width:520px}\n.contact-form input,.contact-form textarea{background:#0e1b34;color:var(--text);border:1px solid #1d2f55;border-radius:12px;padding:10px}\n.contact-form button{justify-self:start}\n\n.footer{margin-top:60px;bwps:inainh;border-top:1px solid #0f1d35;padding:22px 0 10px}\n.footer .container{display:flex;justify:space-between;gap:16px;align-items:flex-start}\n.footer-right{display:flex;flex-wrap:wrap;gap:12px}\n.copyright{text-align:center;color:var(--muted);padding:12px 0 6px}\n\n.fade{opacity:0;transform:translateY(6px);transition:.5s ease}\n.fade.show{opacity:1;transform:none}\n\n/** Mobile */\n@media (max-width: 860px){\n  .mainnav{position:fixed;inset:60px 0 auto 0;blackground#0b1426;border-top:1px solid #11223b;padding:16px;display:none;flex-direction:column;gap:12px}\n  body.nav-open .mainnav{display:flex}\n  .hamburger{display:block;margin-left:auto}\n  .why-grid{grid-template-columns:1fr}\n  .sponsor-grid{grid-template-columns:repeat(2,1fr)}\n  .gallery{grid-template-columns:repeat(2,1fr)}\n}\n
+/*
+ * Custom styles for The Wasatch Yard site.
+ * This file is based on the original styling but has been updated to include
+ * a mobile friendly navigation (with hamburger menu and search bar), updated
+ * sponsor layout with images, a repositioned lap-time bubble with a
+ * photographic background, and various textual tweaks. Where possible the
+ * existing colour palette and layout have been preserved for consistency.
+ */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #161621;
+  color: #F5F9FF;
+}
+
+/* Container helper */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(7, 28, 42, 0.8);
+  padding: 4px 0;
+}
+
+/* Flex container for logo, search, hamburger and nav */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.navbar nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar nav ul li {
+  margin-left: 15px;
+}
+
+.navbar nav ul li a {
+  color: #F0F4F8;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 4px 6px;
+}
+
+.navbar a.btn-nav {
+  background: #E63946;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Search bar */
+.search input {
+  width: 200px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #264066;
+  background: #0d1d33;
+  color: #F5F9FF;
+}
+.search input::placeholder {
+  color: #6c7a99;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #E63946;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background-image: linear-gradient(135deg, rgba(7,28,42,0.9) 0%, rgba(17,40,68,0.8) 50%, rgba(34,68,104,0.6) 100%), url('assets/hero.png');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero .content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .location {
+  font-size: 1rem;
+  color: #E63946;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.hero .tagline {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+.event-date {
+  font-size: 0.9rem;
+  color: #8FAAD2;
+  margin-top: 0.3rem;
+}
+
+/* Countdown timer */
+.countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.count-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.count-item span:first-child {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E63946;
+}
+.count-item .label {
+  font-size: 0.8rem;
+  color: #E0E1DD;
+  margin-top: 0.2rem;
+}
+
+/* Section spacing */
+.section {
+  padding: 80px 0;
+  scroll-margin-top: 80px;
+}
+
+/* Card sections */
+.card-section {
+  background: #1e233a;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 60px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.section.dark {
+  background: #0a1f33;
+}
+
+/* Stats */
+.stats {
+  background: #14182c;
+  padding: 60px 0;
+}
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+.stat {
+  background: #10263c;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1 1 200px;
+  padding: 20px;
+}
+.stat .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E63946;
+}
+.stat .label {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #E0E1DD;
+}
+
+/* Format section */
+.format {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.format-text {
+  flex: 1 1 55%;
+}
+.format-text h3,
+.format-text h4 {
+  margin-top: 1rem;
+  color: #E63946;
+}
+/* Format image with photographic background */
+.format-image {
+  flex: 1 1 35%;
+  position: relative;
+  height: 250px;
+  border-radius: 8px;
+  background-image: url('assets/lap-bg.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.lap-time {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(230, 57, 70, 0.85);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.lap-time .label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+
+/* Cards for prizes */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  flex: 1 1 250px;
+  background: #10263c;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.card h3 {
+  margin-top: 0;
+  color: #E63946;
+}
+
+/* Features in Why section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.feature {
+  flex: 1 1 200px;
+  padding: 10px;
+  background: #0e2642;
+  border-radius: 8px;
+}
+.feature .icon {
+  font-size: 2rem;
+  color: #E63946;
+  margin-bottom: 12px;
+  display: block;
+}
+.feature h3 {
+  margin-top: 0;
+  color: #E63946;
+}
+
+/* Sponsor grid */
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.sponsor {
+  flex: 1 1 200px;
+  background: #10263c;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sponsor img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+.sponsor span {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #E0E1DD;
+  font-weight: normal;
+}
+
+/* Sponsor call-to-action */
+.sponsor-cta {
+  text-align: center;
+}
+
+/* Contact section */
+.contact-section {
+  background: #1e233a;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 60px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.contact-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #E63946;
+  font-size: 1.8rem;
+}
+.contact-section p {
+  margin-bottom: 1rem;
+  color: #E0E1DD;
+}
+.contact-form {
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #264066;
+  background: #0d1d33;
+  color: #F5F9FF;
+  font-size: 1rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6c7a99;
+}
+.contact-form button {
+  background: #E63946;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background: #c72f3d;
+}
+
+/* Footer */
+.footer {
+  background: #0D1B2A;
+  color: #E0E1DD;
+  padding: 40px 0 20px;
+  text-align: center;
+}
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+.footer-info {
+  flex: 1 1 300px;
+}
+.footer-links {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-links a {
+  color: #E0E1DD;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Hide the inline nav links by default and show hamburger */
+  .navbar nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1e233a;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 8px 8px;
+    padding: 10px 0;
+  }
+  .navbar nav.open ul {
+    display: flex;
+  }
+  .navbar nav ul li {
+    margin: 10px 0;
+    text-align: right;
+    padding: 0 20px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* Hide search bar on small screens to save space */
+  .search {
+    display: none;
+  }
+  /* Adjust format section stacking on small screens */
+  .format {
+    flex-direction: column;
+  }
+  .format-text,
+  .format-image {
+    flex: 1 1 100%;
+  }
+  .lap-time {
+    bottom: 10px;
+    left: 10px;
+  }
+}
