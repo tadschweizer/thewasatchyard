@@ -3,156 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wasatch Yard</title>
-  <link rel="canonical" href="https://wasatchyard.com/">
+  <title>The Wasatch Yard – Home</title>
+  <!-- Favicon so the page shows a logo in the browser tab -->
   <link rel="icon" href="assets/favicon.png">
-  <meta property="og:title" content="The Wasatch Yard">
-  <meta property="og:url" content="https://wasatchyard.com/">
-  <meta property="og:type" content="website">
-  <meta name="description" content="Backyard ultra in Park City, UT. 4.167-mile loop every hour on the hour until only one remains.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Navigation bar -->
 <header class="navbar">
-  <div class="container navwrap">
-    <a class="logo" href="/">
-      <img src="assets/logo.png" alt="The Wasatch Yard logo" onerror="this.style.display='none'"><span>The Wasatch Yard</span>
-    </a>
-    <button class="hamburger" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="mainnav">
-      <a href="index.html">Home</a>
-      <a href="race-info.html">Race Info</a>
-      <a href="photos.html">Photos</a>
-      <a href="results.html">Results</a>
-      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
-      <form class="nav-search" action="https://www.google.com/search" method="get">
-        <input type="hidden" name="q" value="site:wasatchyard.com">
-        <input name="q" placeholder="Search site" aria-label="Search">
-      </form>
+  <div class="container nav-inner">
+    <!-- Site logo/icon -->
+    <div class="logo">
+      <!-- If you have a dedicated logo file it can be swapped here -->
+      <img src="assets/favicon.png" alt="The Wasatch Yard logo">
+    </div>
+    <!-- Search input for visitors to search the site -->
+    <div class="search">
+      <input type="search" placeholder="Search…" aria-label="Search">
+    </div>
+    <!-- Hamburger button for mobile view -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Primary navigation links -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="race-info.html">Race Info</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="results.html">Results</a></li>
+        <!-- Call‑to‑action button linking directly to UltraSignup registration -->
+        <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Backyard Ultra • Park City, UT</h1>
-    <p class="event-datetime">Starts Friday, December 5, 2025 • 7:00 PM</p>
+<!-- Hero section with countdown -->
+<section class="hero" id="home">
+  <div class="overlay"></div>
+  <div class="content">
+    <p class="location">Park City, Utah</p>
+    <h1>The Wasatch Yard</h1>
+    <p class="tagline">A backyard ultramarathon where endurance meets elevation. Run until you can't. Last one standing wins.</p>
+    <!-- Event date displayed under the tagline for quick reference -->
+    <p class="event-date">December&nbsp;5,&nbsp;2025&nbsp;–&nbsp;7:00&nbsp;PM</p>
     <div class="countdown" id="countdown">
-      <div><span id="cd-d">0</span><label>Days</label></div>
-      <div><span id="cd-h">0</span><label>Hours</label></div>
-      <div><span id="cd-m">0</span><label>Minutes</label></div>
-      <div><span id="cd-s">0</span><label>Seconds</label></div>
+      <div class="count-item"><span id="days">00</span><span class="label">days</span></div>
+      <div class="count-item"><span id="hours">00</span><span class="label">hours</span></div>
+      <div class="count-item"><span id="minutes">00</span><span class="label">minutes</span></div>
+      <div class="count-item"><span id="seconds">00</span><span class="label">seconds</span></div>
     </div>
-    <div class="cta">
-      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
-      <a class="btn ghost" href="race-info.html">Race Info</a>
+    <div class="buttons">
+      <a class="btn-primary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
+      <a class="btn-secondary" href="race-info.html">Learn More</a>
     </div>
   </div>
 </section>
 
-<section class="format fade">
+<!-- Stats section -->
+<section class="section card-section stats fade-section">
+  <div class="container stats-grid">
+    <div class="stat">
+      <div class="value">4.167</div>
+      <div class="label">Miles Per Lap</div>
+    </div>
+    <div class="stat">
+      <!-- Registered runners count pulled from UltraSignup (currently zero) -->
+      <div class="value">0</div>
+      <div class="label">Registered Runners</div>
+    </div>
+    <div class="stat">
+      <div class="value">15+</div>
+      <div class="label">Prizes Throughout Event</div>
+    </div>
+  </div>
+</section>
+
+<!-- Format section -->
+<section id="format" class="section card-section fade-section">
+  <div class="container format">
+    <div class="format-text">
+      <h2>The Format</h2>
+      <h3>What is a Backyard Ultra?</h3>
+      <p>A backyard ultramarathon is a unique race format where runners complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
+      <h4>Each lap contains:</h4>
+      <ul class="bullet-list">
+        <li>4.167 miles of mixed terrain trails</li>
+        <li>Technical sections and mountain views</li>
+        <li>Elevation changes through the course</li>
+        <li>Aid station at start/finish</li>
+      </ul>
+      <p class="italic">There are no winners, only survivors. It's you against yourself, the mountain, and time itself.</p>
+    </div>
+    <div class="format-image">
+      <!-- The lap time overlay sits atop a photo background; positioned bottom‑left -->
+      <div class="lap-time">60:00<br><span class="label">Minutes to complete each lap</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Prizes section -->
+<section id="prizes" class="section dark card-section fade-section">
   <div class="container">
-    <div class="format-card">
-      <div class="lap-bg"></div>
-      <div class="lap-badge"><strong>60:00</strong><span>minutes to complete each lap</span></div>
-      <div class="format-text">
-        <h2>The Format</h2>
-        <p>A 4.167-mile loop every hour, on the hour. Keep starting. Keep finishing. The race ends when only one runner completes a lap that no one else finishes.</p>
-        <ul>
-          <li>Mixed terrain with elevation changes</li>
-          <li>Technical sections and mountain views</li>
-          <li>Aid station at start/finish</li>
-        </ul>
+    <h2>Lap‑Specific Prizes</h2>
+    <p>We celebrate every milestone! Throughout the event, runners will have opportunities to win prizes at specific lap counts, encouraging endurance while keeping it inclusive and fun for all participants.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Early Bird</h3>
+        <p>Prizes for reaching milestone laps throughout the day</p>
+      </div>
+      <div class="card">
+        <h3>Endurance</h3>
+        <p>Special recognition for ultra‑distance achievements</p>
+      </div>
+      <div class="card">
+        <h3>Last Standing</h3>
+        <p>Ultimate prize for the final runner remaining</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="why fade">
+<!-- Why section -->
+<section id="why" class="section card-section fade-section">
   <div class="container">
     <h2>Why The Wasatch Yard?</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <h3>Entry‑Level Pricing</h3>
-        <p>One of the most affordable ultras around—join the fun without breaking the bank.</p>
-      </div>
-      <div class="why-item">
+    <p>Experience a unique endurance challenge in the stunning Wasatch Mountains with entry‑level pricing, scenic vistas, mental toughness and a supportive community.</p>
+    <div class="features">
+      <div class="feature">
+        <span class="icon">🌄</span>
         <h3>Start at Dusk</h3>
-        <p>We kick off at 7:00 PM—settle into the rhythm and embrace the night from the first whistle.</p>
+        <p>Begin your journey as the sun sets over the Wasatch mountains.</p>
       </div>
-      <div class="why-item">
-        <h3>Loop Logistics</h3>
-        <p>Dialed aid and crew access every hour so you can focus on moving forward.</p>
+      <div class="feature">
+        <span class="icon">💰</span>
+        <h3>Entry‑Level Pricing</h3>
+        <p>Enjoy a competitive ultra with a low relative cost.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🧠</span>
+        <h3>Mental Toughness</h3>
+        <p>Challenge your limits and discover what you're truly capable of.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🤝</span>
+        <h3>Community</h3>
+        <p>Join a supportive community of ultrarunners from across the country.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sponsors fade">
+<!-- Sponsors section -->
+<section id="sponsors" class="section dark card-section fade-section">
   <div class="container">
-    <h2>Sponsors</h2>
+    <h2>Our Sponsors</h2>
+    <p>Thank you to our amazing partners who make The Wasatch Yard possible</p>
     <div class="sponsor-grid">
-      <img src="assets/sponsor1.png" alt="Sponsor 1" onerror="this.src='assets/placeholder.png'">
-      <img src="assets/sponsor2.png" alt="Sponsor 2" onerror="this.src='assets/placeholder.png'">
-      <img src="assets/sponsor3.png" alt="Sponsor 3" onerror="this.src='assets/placeholder.png'">
-      <img src="assets/sponsor4.png" alt="Sponsor 4" onerror="this.src='assets/placeholder.png'">
+      <!-- Replace these image filenames with your actual sponsor logos located in the assets folder -->
+      <div class="sponsor">
+        <img src="assets/sponsor1.png" alt="Mount to Coast Shoes logo">
+        <span>Mount to Coast Shoes</span>
+      </div>
+      <div class="sponsor">
+        <img src="assets/sponsor2.png" alt="Sarah Schweizer Realty logo">
+        <span>Sarah Schweizer Realty</span>
+      </div>
+      <div class="sponsor">
+        <img src="assets/sponsor3.png" alt="Kodiak Cakes logo">
+        <span>Kodiak Cakes</span>
+      </div>
+      <div class="sponsor">
+        <img src="assets/sponsor4.png" alt="Urban Sailor Coffee logo">
+        <span>Urban Sailor Coffee (Park City)</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="contact fade">
+<!-- Sponsor CTA section -->
+<section class="section card-section fade-section">
+  <div class="container sponsor-cta">
+    <h2>Want to Be a Sponsor?</h2>
+    <p>Join us in supporting this incredible event and the ultrarunning community. Sponsorship opportunities are available at various levels.</p>
+    <a class="btn-primary" href="mailto:info@thewasatchyard.com">Contact Us About Sponsorship</a>
+  </div>
+</section>
+
+<!-- Contact Us section -->
+<section class="section contact-section fade-section">
   <div class="container">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xldobnzq" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" rows="4" placeholder="Your message" required></textarea>
-      <button type="submit" class="btn">Send</button>
+    <h2>Contact Us</h2>
+    <p>Have questions about The Wasatch Yard? Reach out using the form below.</p>
+    <!-- Use Formspree to process submissions without launching the user's mail app -->
+    <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </div>
 </section>
 
-<script>
-  (function() {{
-    const t = new Date("2025-12-05T19:00:00-07:00").getTime();
-    function tick() {{
-      const n = Date.now();
-      let diff = Math.max(0, t - n);
-      const d = Math.floor(diff / (1000*60*60*24)); diff -= d*24*60*60*1000;
-      const h = Math.floor(diff / (1000*60*60)); diff -= h*60*60*1000;
-      const m = Math.floor(diff / (1000*60)); diff -= m*60*1000;
-      const s = Math.floor(diff / 1000);
-      document.getElementById('cd-d').textContent = d;
-      document.getElementById('cd-h').textContent = h;
-      document.getElementById('cd-m').textContent = m;
-      document.getElementById('cd-s').textContent = s;
-      requestAnimationFrame(tick);
-    }}
-    tick();
-  }})();
-</script>
+<!-- Challenge section -->
+<section class="section dark card-section challenge fade-section">
+  <div class="container">
+    <h2>Are You Ready for the Challenge?</h2>
+    <p>Join runners from across the country in this ultimate test of endurance and mental fortitude in the stunning mountains of Park City.</p>
+    <a class="btn-primary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register for The Wasatch Yard</a>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-left">
-      <p>Park City, Utah • Backyard Ultra</p>
-      <p><a href="https://ultrasignup.com/entrants_event.aspx?did=131654" target="_blank" rel="noopener">Registered Entrants</a></p>
+    <div class="footer-info">
+      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
+      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
     </div>
-    <div class="footer-right">
-      <a href="index.html">Home</a>
-      <a href="race-info.html">Race Info</a>
+    <div class="footer-links">
+      <a href="race-info.html">Race Information</a>
       <a href="photos.html">Photos</a>
       <a href="results.html">Results</a>
-      <a class="btn" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
+      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
     </div>
   </div>
-  <div class="copyright">© 2025 The Wasatch Yard</div>
+  <div class="container">
+    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
+  </div>
 </footer>
+
+<!-- Countdown script -->
 <script>
-  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:0.08});
-  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+  // Countdown timer to December 5, 2025 at 7:00 PM Mountain Time
+  (function() {
+    const eventDate = new Date('December 5, 2025 19:00:00');
+    const pad = (num) => String(num).padStart(2, '0');
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate.getTime() - now.getTime();
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML = '<span class="event-started">Event Started!</span>';
+        clearInterval(timerId);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('days').textContent = pad(days);
+      document.getElementById('hours').textContent = pad(hours);
+      document.getElementById('minutes').textContent = pad(minutes);
+      document.getElementById('seconds').textContent = pad(seconds);
+    }
+    const timerId = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  })();
+
+  // Fade-in on scroll using IntersectionObserver
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeEls = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+  });
+
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('.navbar nav');
+    hamburger.addEventListener('click', function() {
+      nav.classList.toggle('open');
+      // Update accessibility attributes
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+    });
+  });
 </script>
+
 </body>
 </html>
-
