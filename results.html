@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wasatch Yard – Results</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation bar -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <div class="logo"><img src="assets/favicon.png" alt="The Wasatch Yard logo"></div>
+    <div class="search"><input type="search" placeholder="Search…" aria-label="Search"></div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="race-info.html">Race Info</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="results.html" class="active">Results</a></li>
+        <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero section for results -->
+<section class="hero small-hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Race Results</h1>
+    <p>Final standings and lap counts</p>
+  </div>
+</section>
+
+<!-- Results section -->
+<section class="section card-section fade-section">
+  <div class="container">
+    <h2>Event Results</h2>
+    <p>The results of The Wasatch Yard will be posted here after the event concludes. Check back soon for final standings and lap counts!</p>
+    <!-- Placeholder table to show how results could be structured -->
+    <table style="width:100%; border-collapse: collapse; margin-top: 30px;">
+      <thead>
+        <tr style="background:#15294A; color:#F5F9FF;">
+          <th style="padding: 10px; border: 1px solid #11223B;">Rank</th>
+          <th style="padding: 10px; border: 1px solid #11223B;">Runner</th>
+          <th style="padding: 10px; border: 1px solid #11223B;">Laps Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #11223B;">1</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #11223B;">2</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #11223B;">3</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Contact Us section -->
+<section class="section contact-section fade-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Have questions about the results or want to submit your run data? Reach out below.</p>
+    <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-info">
+      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
+      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="race-info.html">Race Info</a>
+      <a href="photos.html">Photos</a>
+      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts: fade-in and mobile menu toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeEls = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('.navbar nav');
+    hamburger.addEventListener('click', function() {
+      nav.classList.toggle('open');
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+    });
+  });
+</script>
+
+</body>
+</html>
