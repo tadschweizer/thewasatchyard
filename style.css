@@ -454,7 +454,8 @@ box-shadow: 0 6px 16px rgba(0,0,0,0.3);
   }
 }
 
-/* Route embed & location */
-.route-embed .strava-embed-placeholder{width:100%; max-width: 100%;}
-.location-card{background:#0b1426;border:1px solid #142544;border-radius:16px;padding:18px;margin:18px auto;max-width:900px}
-.location-card a{color:#4ea1ff}
+/* Unified Course & Route section */
+.route-section .location-card{background:#0b1426;border:1px solid #142544;border-radius:16px;padding:18px;margin:18px auto;max-width:900px}
+.route-section .location-card a{color:#4ea1ff}
+.route-embed .strava-embed-placeholder{width:100%; max-width:100%;}
+.route-embed .btn.btn-text{margin-bottom:10px}
