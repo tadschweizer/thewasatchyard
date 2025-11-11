@@ -50,7 +50,7 @@
     <h1>The Wasatch Yard</h1>
     <p class="tagline">A backyard ultramarathon where endurance meets elevation. Run until you can't. Last one standing wins.</p>
     <!-- Event date displayed under the tagline for quick reference -->
-    <p class="event-date">December&nbsp;12,&nbsp;2025&nbsp;–&nbsp;7:00&nbsp;PM</p>
+    <p class="event-date">December&nbsp;5,&nbsp;2025&nbsp;–&nbsp;7:00&nbsp;PM</p>
     <div class="countdown" id="countdown">
       <div class="count-item"><span id="days">00</span><span class="label">days</span></div>
       <div class="count-item"><span id="hours">00</span><span class="label">hours</span></div>
@@ -332,9 +332,9 @@
 
 <!-- Countdown script -->
 <script>
-  // Countdown timer to December 12th, 2025 at 7:00 PM Mountain Time
+  // Countdown timer to December 5, 2025 at 7:00 PM Mountain Time
   (function() {
-    const eventDate = new Date('December 12th, 2025 19:00:00');
+    const eventDate = new Date('December 5, 2025 19:00:00');
     const pad = (num) => String(num).padStart(2, '0');
     function updateCountdown() {
       const now = new Date();
@@ -382,6 +382,40 @@
       hamburger.setAttribute('aria-expanded', !expanded);
     });
   });
+</script>
+
+
+<script>
+// Robust countdown to Dec 12, 2025 7:00 PM Mountain (MST = UTC-7 in December)
+// Use absolute UTC time to avoid browser date parsing differences.
+(function(){
+  var dEl = document.getElementById('cd-d');
+  var hEl = document.getElementById('cd-h');
+  var mEl = document.getElementById('cd-m');
+  var sEl = document.getElementById('cd-s');
+  if(!dEl || !hEl || !mEl || !sEl){ return; } // if countdown isn't on this page, bail
+
+  // 2025-12-12 19:00:00 MST == 2025-12-13T02:00:00Z
+  var eventUtcMs = Date.parse('2025-12-13T02:00:00Z');
+  if (isNaN(eventUtcMs)) { return; } // parsing guard
+
+  function pad2(n){ return (n<10?'0':'') + n; }
+  function tick(){
+    var now = Date.now();
+    var diff = Math.max(0, eventUtcMs - now);
+    var days = Math.floor(diff / 86400000); diff -= days*86400000;
+    var hrs  = Math.floor(diff / 3600000);  diff -= hrs*3600000;
+    var mins = Math.floor(diff / 60000);    diff -= mins*60000;
+    var secs = Math.floor(diff / 1000);
+
+    dEl.textContent = pad2(days);
+    hEl.textContent = pad2(hrs);
+    mEl.textContent = pad2(mins);
+    sEl.textContent = pad2(secs);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 </script>
 
 </body>
