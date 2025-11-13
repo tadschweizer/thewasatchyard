@@ -460,9 +460,4 @@ box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 .route-embed .strava-embed-placeholder{width:100%; max-width:100%;}
 .route-embed .btn.btn-text{margin-bottom:10px}
 
-/* Multi-logo row in navbar */
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+section#presented-by { margin-top: 2rem; }
