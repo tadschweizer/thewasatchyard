@@ -473,3 +473,16 @@ box-shadow: 0 6px 16px rgba(0,0,0,0.3);
   gap: 0.75rem;
   justify-items: center;
 }
+
+/* Center the "Presented by" section */
+#presented-by {
+  text-align: center;
+}
+
+/* Make its sponsor grid truly centered with 3 equal columns on desktop */
+@media (min-width: 768px) {
+  #presented-by .sponsor-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    justify-content: center;
+  }
+}
