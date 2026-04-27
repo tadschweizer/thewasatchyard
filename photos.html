@@ -3,111 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wasatch Yard – Photos</title>
+  <title>The Wasatch Yard - Photos</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation bar -->
 <header class="navbar">
   <div class="container nav-inner">
-    <div class="logo" aria-label="Partner logos">
-      <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
-      <img src="assets/saltystarlogo.png" alt="Salty Star logo">
-      <img src="assets/le6amclub.png" alt="Le 6AM Club logo">
+    <div class="brand">
+      <div class="brand-mark" aria-label="Presented by partner logos">
+        <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
+        <img src="assets/saltystarlogo.png" alt="Salty Star logo">
+        <img src="assets/le6amclub.png" alt="Le 6 AM Club logo">
+      </div>
+      <div class="brand-copy">
+        <p class="eyebrow">Backyard Ultra</p>
+        <p class="title">The Wasatch Yard</p>
+      </div>
     </div>
-    <div class="search"><input type="search" placeholder="Search…" aria-label="Search"></div>
-    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="photos.html" class="active">Photos</a></li>
-        <li><a href="results.html">Results</a></li>
-        <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register</a></li>
-      </ul>
-    </nav>
+
+    <div class="nav-shell">
+      <div class="nav-badge">Scenes from race day</div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+        <div class="hamburger-inner">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="race-info.html">Race Info</a></li>
+          <li><a href="photos.html" class="active">Photos</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
-<!-- Hero section for photos -->
 <section class="hero small-hero">
   <div class="overlay"></div>
-  <div class="content">
-    <h1>Photo Gallery</h1>
-    <p>Snapshots from The Wasatch Yard</p>
+  <div class="container hero-grid">
+    <div class="hero-card content">
+      <div class="hero-kicker">Race day moments</div>
+      <p class="location">Park City, Utah</p>
+      <h1>Photo Gallery</h1>
+      <div class="hero-copy">
+      <p>This is where we will share the parts of race day that matter most: the start line, the crew area, the long night, and the runners still moving when it gets hard.</p>
+        <p class="event-date">As race photos come in, we will keep adding the best of them here.</p>
+      </div>
+    </div>
+
+    <aside class="hero-aside">
+      <p class="hero-aside-title">What belongs here</p>
+      <div class="panel">
+        <p>We want real race moments here: crews, runners, headlamps, and the course at every hour of the day.</p>
+      </div>
+      <div class="panel">
+        <p>A few strong photos will always say more than a giant gallery full of filler.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- Photo gallery section -->
-<section class="section card-section fade-section">
-  <div class="container">
-    <h2>Event Photos</h2>
-    <p>Enjoy some snapshots from previous editions of The Wasatch Yard. Replace these placeholders with your own event photos!</p>
+<section class="section fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Gallery</span>
+      <h2>Scenes from The Wasatch Yard</h2>
+      <p>These are the moments worth catching once the work starts.</p>
+    </div>
+
     <div class="gallery-grid">
-      <img src="assets/placeholder.png" alt="Photo 1">
-      <img src="assets/placeholder.png" alt="Photo 2">
-      <img src="assets/placeholder.png" alt="Photo 3">
-      <img src="assets/placeholder.png" alt="Photo 4">
-      <img src="assets/placeholder.png" alt="Photo 5">
-      <img src="assets/placeholder.png" alt="Photo 6">
+      <article class="gallery-card">
+        <h3>Start line energy</h3>
+        <p>Opening laps, pre-race nerves, and the first whistle.</p>
+      </article>
+      <article class="gallery-card">
+        <h3>Round Valley terrain</h3>
+        <p>Course views that help runners understand the feel of the loop.</p>
+      </article>
+      <article class="gallery-card">
+        <h3>Night racing</h3>
+        <p>Headlamps, fatigue, and the atmosphere after dark.</p>
+      </article>
+      <article class="gallery-card">
+        <h3>Crew support</h3>
+        <p>The small between-lap moments that define a backyard ultra.</p>
+      </article>
+      <article class="gallery-card">
+        <h3>Finish-line grit</h3>
+        <p>The deeper the race goes, the stronger the visuals become.</p>
+      </article>
+      <article class="gallery-card">
+        <h3>Community moments</h3>
+        <p>Volunteers, spectators, and the feel of the event beyond the course.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Contact Us section -->
-<section class="section contact-section fade-section">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p>Have a great photo to share or a question about The Wasatch Yard? Reach out below.</p>
-    <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<section class="section dark fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Photo guidance</span>
+      <h2>What we want to show</h2>
+      <p>The best race galleries show the whole day, not just the start and finish.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Lead with the best image</h3>
+        <p>Lead with the image that best captures what this race feels like.</p>
+      </div>
+      <div class="card">
+        <h3>Keep captions short</h3>
+        <p>Keep the captions short and let the images carry the page.</p>
+      </div>
+      <div class="card">
+        <h3>Show variety</h3>
+        <p>Show the course, the people, the crew area, and the late-race suffering that defines the format.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
+<section class="section contact-section fade-section">
+  <div class="container">
+    <div class="section-intro">
+      <span class="section-label">Share photos</span>
+      <h2>Send in your images or questions</h2>
+      <p>If you took good photos, have media questions, or want to share something from race day, send it over.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-panel panel">
+        <h3>What to send</h3>
+        <div class="contact-list">
+          <div>
+            <strong>Photo submissions</strong>
+            <span>Race-day images, credits, and usage permissions</span>
+          </div>
+          <div>
+            <strong>Media requests</strong>
+            <span>Questions about event coverage or sharing sponsor photos</span>
+          </div>
+          <div>
+            <strong>General contact</strong>
+            <span>Anything else related to the gallery or race visuals</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-info">
-      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
-      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
+      <p>Race-day photos, crew moments, and the parts of the event people will still remember later.</p>
+      <p><strong>Location:</strong> Park City, Utah</p>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="race-info.html">Race Info</a>
       <a href="results.html">Results</a>
-      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
+      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
     </div>
   </div>
-  <div class="container">
-    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Scripts: fade-in and mobile menu toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(function(entries, obs) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(function(el) { observer.observe(el); });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(function(el) {
+      observer.observe(el);
+    });
+
     const hamburger = document.getElementById('hamburger');
     const nav = document.querySelector('.navbar nav');
-    hamburger.addEventListener('click', function() {
+
+    function toggleMenu() {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-      hamburger.setAttribute('aria-expanded', !expanded);
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
     });
   });
 </script>

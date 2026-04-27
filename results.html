@@ -3,130 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wasatch Yard – Results</title>
+  <title>The Wasatch Yard - Results</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation bar -->
 <header class="navbar">
   <div class="container nav-inner">
-    <div class="logo" aria-label="Partner logos">
-      <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
-      <img src="assets/saltystarlogo.png" alt="Salty Star logo">
-      <img src="assets/le6amclub.png" alt="Le 6AM Club logo">
+    <div class="brand">
+      <div class="brand-mark" aria-label="Presented by partner logos">
+        <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
+        <img src="assets/saltystarlogo.png" alt="Salty Star logo">
+        <img src="assets/le6amclub.png" alt="Le 6 AM Club logo">
+      </div>
+      <div class="brand-copy">
+        <p class="eyebrow">Backyard Ultra</p>
+        <p class="title">The Wasatch Yard</p>
+      </div>
     </div>
-    <div class="search"><input type="search" placeholder="Search…" aria-label="Search"></div>
-    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="results.html" class="active">Results</a></li>
-        <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register</a></li>
-      </ul>
-    </nav>
+
+    <div class="nav-shell">
+      <div class="nav-badge">Results and race history</div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+        <div class="hamburger-inner">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="race-info.html">Race Info</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="results.html" class="active">Results</a></li>
+          <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
-<!-- Hero section for results -->
 <section class="hero small-hero">
   <div class="overlay"></div>
-  <div class="content">
-    <h1>Race Results</h1>
-    <p>Final standings and lap counts</p>
+  <div class="container hero-grid">
+    <div class="hero-card content">
+      <div class="hero-kicker">After the last lap</div>
+      <p class="location">Park City, Utah</p>
+      <h1>Race Results</h1>
+      <div class="hero-copy">
+        <p>Once the race is over, this is where we will post final standings, lap counts, and how the day finally shook out.</p>
+        <p class="event-date">Check back after race day for official results and standout performances.</p>
+      </div>
+    </div>
+
+    <aside class="hero-aside">
+      <p class="hero-aside-title">What you will find here</p>
+      <div class="panel">
+        <p>We will post the winner, final lap counts, and the details people want first.</p>
+      </div>
+      <div class="panel">
+        <p>As the race grows, this page can also hold prior-year results and race notes.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- Results section -->
-<section class="section card-section fade-section">
+<section class="section fade-section">
   <div class="container">
-    <h2>Event Results</h2>
-    <p>The results of The Wasatch Yard will be posted here after the event concludes. Check back soon for final standings and lap counts!</p>
-    <!-- Placeholder table to show how results could be structured -->
-    <table style="width:100%; border-collapse: collapse; margin-top: 30px;">
-      <thead>
-        <tr style="background:#15294A; color:#F5F9FF;">
-          <th style="padding: 10px; border: 1px solid #11223B;">Rank</th>
-          <th style="padding: 10px; border: 1px solid #11223B;">Runner</th>
-          <th style="padding: 10px; border: 1px solid #11223B;">Laps Completed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #11223B;">1</td>
-          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
-          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #11223B;">2</td>
-          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
-          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
-        </tr>
-        <tr>
-          <td style="padding: 10px; border: 1px solid #11223B;">3</td>
-          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
-          <td style="padding: 10px; border: 1px solid #11223B;">TBD</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="results-grid">
+      <div class="results-card">
+        <div class="label">Status</div>
+        <div class="value">Coming Soon</div>
+        <p>Final results will be posted after the race concludes.</p>
+      </div>
+      <div class="results-card">
+        <div class="label">What to expect</div>
+        <div class="value">Rank + Laps</div>
+        <p>A clear board of top finishers, total laps, and final standing.</p>
+      </div>
+      <div class="results-card">
+        <div class="label">Looking ahead</div>
+        <div class="value">Race History</div>
+        <p>As the years build up, we will keep track of who lasted and how each race played out.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Contact Us section -->
+<section class="section fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Results table</span>
+      <h2>Event standings</h2>
+      <p>After the race, the official standings will be posted here.</p>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Runner</th>
+            <th>Laps Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section dark fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">What to publish</span>
+      <h2>Make results more useful</h2>
+      <p>When the race is done, we want this page to show more than a list of names.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Add a winner recap</h3>
+        <p>A short recap of the winning lap and how the race ended gives the results some life.</p>
+      </div>
+      <div class="card">
+        <h3>Highlight notable marks</h3>
+        <p>There is usually more than one good story in a backyard ultra. We want to share a few of them.</p>
+      </div>
+      <div class="card">
+        <h3>Keep prior years</h3>
+        <p>Each year should add to the history of the race instead of disappearing into a spreadsheet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section contact-section fade-section">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Have questions about the results or want to submit your run data? Reach out below.</p>
-    <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="section-intro">
+      <span class="section-label">Questions</span>
+      <h2>Need help with results or runner data?</h2>
+      <p>If something needs to be corrected or you have a question after the race, send us a note.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-panel panel">
+        <h3>Use this form for</h3>
+        <div class="contact-list">
+          <div>
+            <strong>Result corrections</strong>
+            <span>Name spelling, rank updates, or lap-count questions</span>
+          </div>
+          <div>
+            <strong>Runner follow-up</strong>
+            <span>Clarifying official outcome or requesting event details after the race</span>
+          </div>
+          <div>
+            <strong>Media requests</strong>
+            <span>Asking to share official results or race summary information</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-info">
-      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
-      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
+      <p>Final standings, race notes, and the names of the runners who stayed in it the longest.</p>
+      <p><strong>Location:</strong> Park City, Utah</p>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="race-info.html">Race Info</a>
       <a href="photos.html">Photos</a>
-      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
+      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
     </div>
   </div>
-  <div class="container">
-    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Scripts: fade-in and mobile menu toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(function(entries, obs) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(function(el) { observer.observe(el); });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(function(el) {
+      observer.observe(el);
+    });
+
     const hamburger = document.getElementById('hamburger');
     const nav = document.querySelector('.navbar nav');
-    hamburger.addEventListener('click', function() {
+
+    function toggleMenu() {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-      hamburger.setAttribute('aria-expanded', !expanded);
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
     });
   });
 </script>

@@ -3,397 +3,444 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wasatch Yard – Home</title>
-  <!-- Favicon so the page shows a logo in the browser tab -->
+  <title>The Wasatch Yard - Home</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation bar -->
 <header class="navbar">
   <div class="container nav-inner">
-    <!-- Site logo/icon -->
-    <div class="logo" aria-label="Partner logos">
-      <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
-      <img src="assets/saltystarlogo.png" alt="Salty Star logo">
-      <img src="assets/le6amclub.png" alt="Le 6AM Club logo">
+    <div class="brand">
+      <div class="brand-mark" aria-label="Presented by partner logos">
+        <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
+        <img src="assets/saltystarlogo.png" alt="Salty Star logo">
+        <img src="assets/le6amclub.png" alt="Le 6 AM Club logo">
+      </div>
+      <div class="brand-copy">
+        <p class="eyebrow">Backyard Ultra</p>
+        <p class="title">The Wasatch Yard</p>
+      </div>
     </div>
-    <!-- Search input for visitors to search the site -->
-    <div class="search">
-      <input type="search" placeholder="Search…" aria-label="Search">
+
+    <div class="nav-shell">
+      <div class="nav-badge">Park City, Utah | October 23, 2026</div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+        <div class="hamburger-inner">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="race-info.html">Race Info</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a></li>
+        </ul>
+      </nav>
     </div>
-    <!-- Hamburger button for mobile view -->
-    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <!-- Primary navigation links -->
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="race-info.html">Race Info</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="results.html">Results</a></li>
-        <!-- Call‑to‑action button linking directly to UltraSignup registration -->
-        <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 
-<!-- Hero section with countdown -->
 <section class="hero" id="home">
   <div class="overlay"></div>
-  <div class="content">
-    <p class="location">Park City, Utah</p>
-    <h1>The Wasatch Yard</h1>
-    <p class="tagline">A backyard ultramarathon where endurance meets elevation. Run until you can't. Last one standing wins.</p>
-    <!-- Event date displayed under the tagline for quick reference -->
-    <p class="event-date">December&nbsp;12,&nbsp;2025&nbsp;–&nbsp;7:00&nbsp;PM</p>
-    <div class="countdown" id="countdown">
-      <div class="count-item"><span id="days">00</span><span class="label">days</span></div>
-      <div class="count-item"><span id="hours">00</span><span class="label">hours</span></div>
-      <div class="count-item"><span id="minutes">00</span><span class="label">minutes</span></div>
-      <div class="count-item"><span id="seconds">00</span><span class="label">seconds</span></div>
+  <div class="container hero-grid">
+    <div class="hero-card content">
+      <div class="hero-kicker">One more lap. Then another.</div>
+      <p class="location">Park City, Utah</p>
+      <h1>The Wasatch Yard</h1>
+      <div class="hero-copy">
+        <p class="tagline">The Wasatch Yard is a backyard ultra built for runners who want a fair course, a strong crew area, and a long night of seeing what they still have left when the clock turns over again.</p>
+        <p class="event-date">Friday, October 23, 2026 at 6:00 PM Mountain Time</p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-pill"><strong>Format:</strong> 4.167 miles every hour</div>
+        <div class="hero-pill"><strong>Terrain:</strong> Round Valley mixed trail</div>
+        <div class="hero-pill"><strong>Finish:</strong> Until one runner remains</div>
+      </div>
+      <div class="buttons">
+        <a class="btn-primary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register Now</a>
+        <a class="btn-secondary" href="race-info.html">See Race Details</a>
+      </div>
     </div>
-    <div class="buttons">
-      <a class="btn-primary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
-      <a class="btn-secondary" href="race-info.html">Learn More</a>
+
+    <aside class="hero-aside">
+      <p class="hero-aside-title">Countdown to the start</p>
+      <div class="countdown" id="countdown">
+        <div class="count-item"><span id="days">00</span><span class="label">Days</span></div>
+        <div class="count-item"><span id="hours">00</span><span class="label">Hours</span></div>
+        <div class="count-item"><span id="minutes">00</span><span class="label">Minutes</span></div>
+        <div class="count-item"><span id="seconds">00</span><span class="label">Seconds</span></div>
+      </div>
+      <div class="panel">
+        <p class="section-label">At a glance</p>
+        <p>Same start line every hour. Same job every lap. Be back on time and keep moving.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section fade-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-kicker">Loop length</span>
+        <div class="stat-value">4.167</div>
+        <p>Miles per lap, starting every hour on the hour.</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-kicker">Start time</span>
+        <div class="stat-value">6 PM</div>
+        <p>We start in the evening and race straight into the night.</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-kicker">Location</span>
+        <div class="stat-value">Round Valley</div>
+        <p>Park City access with crew support and scenic terrain.</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-kicker">Goal</span>
+        <div class="stat-value">1 Left</div>
+        <p>No fixed finish line. The race ends when one runner remains.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Stats section -->
-
 <section id="presented-by" class="section fade-section">
-  <div class="container">
-    <h2 style="text-align:center;margin-bottom:1rem;">Presented by</h2>
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Presented by</span>
+      <h2>The teams behind the race</h2>
+        <p>The Wasatch Yard only happens because good local people keep showing up for the running community.</p>
+    </div>
+
     <div class="sponsor-grid">
       <div class="sponsor-card">
         <div class="logo-box">
           <img loading="lazy" src="assets/saltystarlogo.png" alt="Salty Star Run Club logo">
         </div>
         <span class="sponsor-name">Salty Star Run Club</span>
+        <span class="sponsor-note">Helping create the local energy behind race weekend.</span>
       </div>
       <div class="sponsor-card">
         <div class="logo-box">
           <img loading="lazy" src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
         </div>
         <span class="sponsor-name">Rendezvous Run</span>
+        <span class="sponsor-note">Part of the team helping us get this event off the ground.</span>
       </div>
       <div class="sponsor-card">
         <div class="logo-box">
           <img loading="lazy" src="assets/le6amclub.png" alt="Le 6 AM Club logo">
         </div>
         <span class="sponsor-name">Le 6 AM Club</span>
+        <span class="sponsor-note">Built on the same early-mile attitude we want at this race.</span>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- Format section -->
-<section id="format" class="section card-section fade-section">
-  <div class="container format">
-    <div class="format-text">
-      <h2>The Format</h2>
-      <h3>What is a Backyard Ultra?</h3>
-      <p>A backyard ultramarathon is a unique race format where runners complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
-      <h4>Each lap contains:</h4>
-      <ul class="bullet-list">
-        <li>4.167 miles of mixed terrain trails</li>
-        <li>Technical sections and mountain views</li>
-        <li>Elevation changes through the course</li>
-        <li>Aid station at start/finish</li>
-      </ul>
-      <p class="italic">There are no winners, only survivors. It's you against yourself, the mountain, and time itself.</p>
-    </div>
-    <div class="format-image">
-      <!-- The lap time overlay sits atop a photo background; positioned bottom‑left -->
-      <div class="lap-time">60:00<br><span class="label">Minutes to complete each lap</span></div>
+<section id="format" class="section fade-section">
+  <div class="container">
+    <div class="format card-section">
+      <div class="format-text">
+        <span class="section-label">Race format</span>
+        <h2>Simple format. No place to hide.</h2>
+        <p>Every hour, everyone starts together. You cover 4.167 miles, get whatever rest you earn, and come right back to the line to do it again.</p>
+        <h3>What each lap asks of you</h3>
+        <ul class="bullet-list">
+          <li>Controlled pacing on mixed trail from the first lap on</li>
+          <li>Patience once the field starts getting tired</li>
+          <li>Quick decisions in the crew area between laps</li>
+          <li>The discipline to run the lap you need, not the lap your ego wants</li>
+        </ul>
+        <p class="italic">This race gets decided by the runners who stay steady the longest.</p>
+      </div>
+      <div class="format-image">
+        <div class="lap-time">60:00<span class="label">Minutes to complete each lap</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Prizes section -->
-<section id="prizes" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>Lap‑Specific Prizes from Mount To Coast and BUFF®</h2>
-    <p>We celebrate every milestone! Throughout the event, runners will have opportunities to win prizes at specific lap counts, encouraging endurance while keeping it inclusive and fun for all participants.</p>
+<section id="prizes" class="section dark fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Prize flow</span>
+      <h2>Prizes along the way</h2>
+      <p>This race should stay interesting from the early laps all the way to the end, so we will have reasons to keep fighting for the next one.</p>
+    </div>
+
     <div class="cards">
       <div class="card">
-        <h3>Early Bird</h3>
-        <p>Prizes for reaching milestone laps throughout the day</p>
+        <h3>Milestone laps</h3>
+        <p>We will have milestone prizes throughout the race to keep things interesting as the laps add up.</p>
       </div>
       <div class="card">
-        <h3>Endurance</h3>
-        <p>Mount to coast shoes and BUFF® headware for the Mid-pack man and woman</p>
+        <h3>Mid-pack grit</h3>
+        <p>Strong efforts in the middle of the field matter too, and we want to recognize that.</p>
       </div>
       <div class="card">
-        <h3>Last Standing</h3>
-        <p>Mount to coast shoes and BUFF® headwar for the final man and woman runners remaining!</p>
+        <h3>Last standing</h3>
+        <p>The longer you last, the more the race asks of you, and the final awards should mean something.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Why section -->
 <section id="why" class="section fade-section">
-<div class="container">
-<h2>Why The Wasatch Yard?</h2>
-<p>Experience a unique endurance challenge in the Wasatch Mountains — equal parts grit, community, and beauty.</p>
-
-
-<div class="why-grid">
-<div class="why-card">
-<div class="icon-bubble blue">
-<span>🌄</span>
-</div>
-<div class="why-text">
-<h3>Start at Dusk</h3>
-<p>Begin your journey as the sun sets over the Wasatch mountains.</p>
-</div>
-</div>
-
-
-<div class="why-card">
-<div class="icon-bubble orange">
-<span>💰</span>
-</div>
-<div class="why-text">
-<h3>Entry‑Level Pricing</h3>
-<p>Experience an unforgettable ultra without breaking the bank.</p>
-</div>
-</div>
-
-
-<div class="why-card">
-<div class="icon-bubble purple">
-<span>🧠</span>
-</div>
-<div class="why-text">
-<h3>Mental Toughness</h3>
-<p>Push through the night, the fatigue, and your limits.</p>
-</div>
-</div>
-
-
-<div class="why-card">
-<div class="icon-bubble blue">
-<span>🤝</span>
-</div>
-<div class="why-text">
-<h3>Community</h3>
-<p>Run with people who share your love of hard things and big views.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Sponsors section -->
-
-<section id="sponsors" class="section dark card-section fade-section">
   <div class="container">
-    <h2>Our Sponsors</h2>
-    <p>Thank you to our amazing partners who make The Wasatch Yard possible</p>
-
-    <h3 style="margin-top:1.5rem">Level 1</h3>
-    <div class="sponsor-grid">
-      <!-- Mount to Coast -->
-      <div class="sponsor-card">
-        <a href="https://mounttocoast.com/" target="_blank" rel="noopener" aria-label="Mount to Coast website">
-          <div class="logo-box">
-            <img loading="lazy" src="assets/mounttocoast.png" alt="Mount to Coast logo">
-          </div>
-          <span class="sponsor-name">Mount to Coast</span>
-        </a>
-      </div>
-      <!-- Buff -->
-      <div class="sponsor-card">
-        <a href="https://www.buff.com/" target="_blank" rel="noopener" aria-label="BUFF website">
-          <div class="logo-box">
-            <img loading="lazy" src="assets/buff.png" alt="BUFF logo">
-          </div>
-          <span class="sponsor-name">BUFF</span>
-        </a>
-      </div>
-      <!-- Sidas -->
-      <div class="sponsor-card">
-        <a href="https://www.sidas.com/" target="_blank" rel="noopener" aria-label="Sidas website">
-          <div class="logo-box">
-            <img loading="lazy" src="assets/sidas.png" alt="Sidas logo">
-          </div>
-          <span class="sponsor-name">Sidas</span>
-        </a>
-      </div>
+    <div class="section-intro">
+      <span class="section-label">Why this race</span>
+      <h2>Why run The Wasatch Yard?</h2>
+      <p>This race is for runners who like honest effort, mountain air, and the kind of format that keeps asking the same question until only one answer is left.</p>
     </div>
 
-    <h3 style="margin-top:2rem">Level 2</h3>
-    <div class="sponsor-grid">
-      <!-- Momentous -->
-      <div class="sponsor-card">
-        <a href="https://www.livemomentous.com/" target="_blank" rel="noopener" aria-label="Momentous website">
-          <div class="logo-box">
-            <img loading="lazy" src="assets/momentous.png" alt="Momentous logo">
-          </div>
-          <span class="sponsor-name">Momentous</span>
-        </a>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon-bubble blue"><span>MT</span></div>
+        <div class="why-text">
+          <h3>Evening start</h3>
+          <p>We roll into sunset, then into headlamps, then into the part of the race where it gets real.</p>
+        </div>
       </div>
-      <!-- Sarah Schweizer Real Estate -->
-      <div class="sponsor-card">
-        <a href="https://sarahschweizer.evrealestate.com/" target="_blank" rel="noopener" aria-label="Sarah Schweizer Real Estate website">
-          <div class="logo-box">
-            <img loading="lazy" src="assets/sarahschweizer.png" alt="Sarah Schweizer Real Estate logo">
-          </div>
-          <span class="sponsor-name">Sarah Schweizer Real Estate</span>
-        </a>
+      <div class="why-card">
+        <div class="icon-bubble orange"><span>$</span></div>
+        <div class="why-text">
+          <h3>Friendly to first-timers, honest for veterans</h3>
+          <p>If this is your first backyard ultra, you will learn fast. If it is not, you will still need to respect the course.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="icon-bubble purple"><span>GR</span></div>
+        <div class="why-text">
+          <h3>Mental game first</h3>
+          <p>The runners who manage themselves well usually last longer than the runners who try to force the day.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="icon-bubble blue"><span>CO</span></div>
+        <div class="why-text">
+          <h3>Good people around you</h3>
+          <p>We want a serious race without losing the local, crew-supported feel that makes people want to come back.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="sponsors" class="section dark fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Partners</span>
+      <h2>Our sponsors</h2>
+      <p>These partners are helping us put on the kind of race we would be proud to run ourselves.</p>
+    </div>
 
-<!-- Sponsor CTA section -->
-<section class="section card-section fade-section">
+    <div class="sponsor-block">
+      <h3 class="tier-heading">Level 1 Partners</h3>
+      <div class="sponsor-grid">
+        <div class="sponsor-card">
+          <a href="https://mounttocoast.com/" target="_blank" rel="noopener" aria-label="Mount to Coast website">
+            <div class="logo-box">
+              <img loading="lazy" src="assets/mounttocoast.png" alt="Mount to Coast logo">
+            </div>
+            <span class="sponsor-name">Mount to Coast</span>
+            <span class="sponsor-note">Supporting milestone prizes and race-day momentum.</span>
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <a href="https://www.buff.com/" target="_blank" rel="noopener" aria-label="BUFF website">
+            <div class="logo-box">
+              <img loading="lazy" src="assets/buff.png" alt="BUFF logo">
+            </div>
+            <span class="sponsor-name">BUFF</span>
+            <span class="sponsor-note">Helping us take care of runners out on course.</span>
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <a href="https://www.sidas.com/" target="_blank" rel="noopener" aria-label="Sidas website">
+            <div class="logo-box">
+              <img loading="lazy" src="assets/sidas.png" alt="Sidas logo">
+            </div>
+            <span class="sponsor-name">Sidas</span>
+            <span class="sponsor-note">Backing the details that matter over a long day and night.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor-block">
+      <h3 class="tier-heading">Level 2 Partners</h3>
+      <div class="sponsor-grid">
+        <div class="sponsor-card">
+          <a href="https://www.livemomentous.com/" target="_blank" rel="noopener" aria-label="Momentous website">
+            <div class="logo-box">
+              <img loading="lazy" src="assets/momentous.png" alt="Momentous logo">
+            </div>
+            <span class="sponsor-name">Momentous</span>
+            <span class="sponsor-note">Supporting preparation, recovery, and staying in the fight.</span>
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <a href="https://sarahschweizer.evrealestate.com/" target="_blank" rel="noopener" aria-label="Sarah Schweizer Real Estate website">
+            <div class="logo-box">
+              <img loading="lazy" src="assets/sarahschweizer.png" alt="Sarah Schweizer Real Estate logo">
+            </div>
+            <span class="sponsor-name">Sarah Schweizer Real Estate</span>
+            <span class="sponsor-note">Local support that helps this race happen.</span>
+          </a>
+        </div>
+        <div class="sponsor-card">
+          <div class="logo-box">
+            <img loading="lazy" src="assets/kodiakcakes.png" alt="Kodiak Cakes logo">
+          </div>
+          <span class="sponsor-name">Kodiak Cakes</span>
+          <span class="sponsor-note">A race-day partner helping keep runners fueled.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section fade-section">
   <div class="container sponsor-cta">
-    <h2>Want to Be a Sponsor?</h2>
-    <p>Join us in supporting this incredible event and the ultrarunning community. Sponsorship opportunities are available at various levels.</p>
-    <a class="btn-primary" href="mailto:info@thewasatchyard.com">Contact Us About Sponsorship</a>
+    <span class="section-label">Sponsor with us</span>
+    <h2>Want to support the event?</h2>
+    <p>If you want to support the race, take care of runners, and help us build something good here, we would love to talk.</p>
+    <a class="btn-primary" href="mailto:info@thewasatchyard.com">Contact About Sponsorship</a>
   </div>
 </section>
 
-<!-- Contact Us section -->
 <section class="section contact-section fade-section">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Have questions about The Wasatch Yard? Reach out using the form below.</p>
-    <!-- Use Formspree to process submissions without launching the user's mail app -->
-    <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="section-intro">
+      <span class="section-label">Questions</span>
+      <h2>Contact the race team</h2>
+      <p>If you have a question before race day, send it over. We would rather answer it now than leave you guessing.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-panel panel">
+        <h3>Before race day</h3>
+        <p>Use the form for registration questions, course questions, sponsorship, or volunteer interest.</p>
+        <div class="contact-list">
+          <div>
+            <strong>Best for</strong>
+            <span>Race logistics, crew questions, and general event details</span>
+          </div>
+          <div>
+            <strong>What you can ask</strong>
+            <span>Registration, race weekend logistics, sponsor questions, and volunteer interest</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
 
-<!-- Challenge section -->
-<section class="section dark card-section challenge fade-section">
-  <div class="container">
-    <h2>Are You Ready for the Challenge?</h2>
-    <p>Join runners from across the country in this ultimate test of endurance and mental fortitude in the stunning mountains of Park City.</p>
-    <a class="btn-primary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register for The Wasatch Yard</a>
+<section class="section dark challenge fade-section">
+  <div class="container sponsor-cta">
+    <span class="section-label">Ready to race</span>
+    <h2>Show up. Finish the lap. Do it again.</h2>
+    <p>If this sounds like your kind of race, get signed up and start thinking about how many times you can come back to the line.</p>
+    <a class="btn-primary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register for The Wasatch Yard</a>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-info">
-      <p>An unforgettable backyard ultramarathon experience in the heart of Park City, Utah.</p>
-      <p><strong>Location:</strong> Park City, Utah – Mountain Resort Area</p>
+      <p>A backyard ultra in Park City built around steady pacing, long hours, and the runners who are still willing to answer the bell.</p>
+      <p><strong>Location:</strong> Park City, Utah</p>
     </div>
     <div class="footer-links">
       <a href="race-info.html">Race Information</a>
       <a href="photos.html">Photos</a>
       <a href="results.html">Results</a>
-      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
+      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
     </div>
   </div>
-  <div class="container">
-    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Countdown script -->
 <script>
-  // Countdown timer to December 12, 2025 at 7:00 PM Mountain Time
   (function() {
-    const eventDate = new Date('December 12, 2025 19:00:00');
-    const pad = (num) => String(num).padStart(2, '0');
+    const eventUtcMs = Date.parse('2026-10-24T00:00:00Z');
+    const ids = ['days', 'hours', 'minutes', 'seconds'];
+    const els = ids.map(function(id) { return document.getElementById(id); });
+    if (els.some(function(el) { return !el; })) return;
+
+    function pad(value) {
+      return String(value).padStart(2, '0');
+    }
+
     function updateCountdown() {
-      const now = new Date();
-      const diff = eventDate.getTime() - now.getTime();
-      if (diff <= 0) {
-        document.getElementById('countdown').innerHTML = '<span class="event-started">Event Started!</span>';
-        clearInterval(timerId);
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
+      const now = Date.now();
+      let diff = Math.max(0, eventUtcMs - now);
+      const days = Math.floor(diff / 86400000);
+      diff -= days * 86400000;
+      const hours = Math.floor(diff / 3600000);
+      diff -= hours * 3600000;
+      const minutes = Math.floor(diff / 60000);
+      diff -= minutes * 60000;
+      const seconds = Math.floor(diff / 1000);
+
       document.getElementById('days').textContent = pad(days);
       document.getElementById('hours').textContent = pad(hours);
       document.getElementById('minutes').textContent = pad(minutes);
       document.getElementById('seconds').textContent = pad(seconds);
     }
-    const timerId = setInterval(updateCountdown, 1000);
+
     updateCountdown();
+    setInterval(updateCountdown, 1000);
   })();
 
-  // Fade-in on scroll using IntersectionObserver
   document.addEventListener('DOMContentLoaded', function() {
     const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(function(entries, obs) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(function(el) { observer.observe(el); });
-  });
+    }, { threshold: 0.12 });
 
-  // Mobile menu toggle
-  document.addEventListener('DOMContentLoaded', function() {
+    fadeEls.forEach(function(el) {
+      observer.observe(el);
+    });
+
     const hamburger = document.getElementById('hamburger');
     const nav = document.querySelector('.navbar nav');
-    hamburger.addEventListener('click', function() {
+
+    function toggleMenu() {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
-      // Update accessibility attributes
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-      hamburger.setAttribute('aria-expanded', !expanded);
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
     });
   });
-</script>
-
-
-<script>
-// Robust countdown to Dec 12, 2025 7:00 PM Mountain (MST = UTC-7 in December)
-// Use absolute UTC time to avoid browser date parsing differences.
-(function(){
-  var dEl = document.getElementById('cd-d');
-  var hEl = document.getElementById('cd-h');
-  var mEl = document.getElementById('cd-m');
-  var sEl = document.getElementById('cd-s');
-  if(!dEl || !hEl || !mEl || !sEl){ return; } // if countdown isn't on this page, bail
-
-  // 2025-12-12 19:00:00 MST == 2025-12-13T02:00:00Z
-  var eventUtcMs = Date.parse('2025-12-13T02:00:00Z');
-  if (isNaN(eventUtcMs)) { return; } // parsing guard
-
-  function pad2(n){ return (n<10?'0':'') + n; }
-  function tick(){
-    var now = Date.now();
-    var diff = Math.max(0, eventUtcMs - now);
-    var days = Math.floor(diff / 86400000); diff -= days*86400000;
-    var hrs  = Math.floor(diff / 3600000);  diff -= hrs*3600000;
-    var mins = Math.floor(diff / 60000);    diff -= mins*60000;
-    var secs = Math.floor(diff / 1000);
-
-    dEl.textContent = pad2(days);
-    hEl.textContent = pad2(hrs);
-    mEl.textContent = pad2(mins);
-    sEl.textContent = pad2(secs);
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
 </script>
 
 </body>

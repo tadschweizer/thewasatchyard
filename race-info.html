@@ -3,202 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wasatch Yard – Race Info</title>
+  <title>The Wasatch Yard - Race Info</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navigation bar -->
 <header class="navbar">
   <div class="container nav-inner">
-    <div class="logo" aria-label="Partner logos">
-      <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
-      <img src="assets/saltystarlogo.png" alt="Salty Star logo">
-      <img src="assets/le6amclub.png" alt="Le 6AM Club logo">
+    <div class="brand">
+      <div class="brand-mark" aria-label="Presented by partner logos">
+        <img src="assets/rendezvousrun.png" alt="Rendezvous Run logo">
+        <img src="assets/saltystarlogo.png" alt="Salty Star logo">
+        <img src="assets/le6amclub.png" alt="Le 6 AM Club logo">
+      </div>
+      <div class="brand-copy">
+        <p class="eyebrow">Backyard Ultra</p>
+        <p class="title">The Wasatch Yard</p>
+      </div>
     </div>
-    <div class="search"><input type="search" placeholder="Search…" aria-label="Search"></div>
-    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="race-info.html" class="active">Race Info</a></li>
-        <li><a href="photos.html">Photos</a></li>
-        <li><a href="results.html">Results</a></li>
-        <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register</a></li>
-      </ul>
-    </nav>
+
+    <div class="nav-shell">
+      <div class="nav-badge">Know the course before you arrive</div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+        <div class="hamburger-inner">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="race-info.html" class="active">Race Info</a></li>
+          <li><a href="photos.html">Photos</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
-<!-- Hero section -->
 <section class="hero small-hero">
   <div class="overlay"></div>
-  <div class="content">
-    <h1>Race Information</h1>
-    <p>Everything you need to know about The Wasatch Yard</p>
-    <p class="event-date">December&nbsp;12,&nbsp;2025&nbsp;–&nbsp;7:00&nbsp;PM</p>
+  <div class="container hero-grid">
+    <div class="hero-card content">
+      <div class="hero-kicker">Know what race day asks</div>
+      <p class="location">Park City, Utah</p>
+      <h1>Race Information</h1>
+      <div class="hero-copy">
+        <p>Everything important for runners and crews should be here: when to show up, what the course asks of you, and what to expect once the laps start stacking up.</p>
+        <p class="event-date">Race day: Friday, October 23, 2026 at 6:00 PM Mountain Time</p>
+      </div>
+      <div class="buttons">
+        <a class="btn-primary" href="https://docs.google.com/document/d/1tcyaa-qYs0_wZOSY09BtnZJSuZXXOMXLKfplL7MV-JA/edit?usp=sharing" target="_blank" rel="noopener">Open Full Race Guide</a>
+        <a class="btn-secondary" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <aside class="hero-aside">
+      <p class="hero-aside-title">Quick prep</p>
+      <div class="panel">
+        <p><strong>Bring:</strong> a headlamp, layers, a crew plan, and a fueling plan you trust.</p>
+      </div>
+      <div class="panel">
+        <p><strong>Expect:</strong> trail that keeps you honest, changing temperatures, and short windows between laps.</p>
+      </div>
+      <div class="panel">
+        <p><strong>Mindset:</strong> do not win the first lap and lose the night because of it.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- Complete guide section -->
-<section class="section card-section fade-section">
-  <div class="container">
-    <h2>Complete Race Guide</h2>
-    <p>Below you'll find everything you need to know about The Wasatch Yard. You can print this page or save it as a PDF for your convenience.</p>
-    <a class="btn-primary" href="https://docs.google.com/document/d/1tcyaa-qYs0_wZOSY09BtnZJSuZXXOMXLKfplL7MV-JA/edit?usp=sharing" target="_blank">View Race Guide</a>
-  </div>
-</section>
+<section class="section fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Overview</span>
+      <h2>Race day basics</h2>
+      <p>If you are traveling in, crewing for someone, or getting ready for your first backyard, start here.</p>
+    </div>
 
-<!-- Format section -->
-<section id="format" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>The Backyard Ultra Format</h2>
-    <p>A backyard ultra is an ultramarathon race where competitors must complete a 4.167‑mile loop every hour, on the hour. The race continues until only one runner remains.</p>
-    <h3>Each lap contains:</h3>
-    <ul class="bullet-list">
-      <li>4.167 miles of mixed terrain (one yard every hour = 100 miles in 24 hours)</li>
-      <li>Technical trail sections with rocks and roots</li>
-      <li>Scenic mountain views throughout</li>
-      <li>Single‑track and wider trail combinations</li>
-      <li>Aid station access at start/finish</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Rules section -->
-<section id="rules" class="section card-section fade-section">
-  <div class="container">
-    <h2>The Rules</h2>
-    <ul class="check-list">
-      <li>Each loop must be completed in under 60 minutes</li>
-      <li>All runners start together at the beginning of each hour (the "whistle")</li>
-      <li>Your rest time is whatever remains of the hour after finishing the lap</li>
-      <li>Miss the start of an hour (DNF) or fail to complete a lap in time and you're eliminated</li>
-      <li>The race ends when only one runner completes a lap that no one else finishes</li>
-      <li>Lap‑specific prizes awarded throughout the day to celebrate milestones</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Location & Course section -->
-<!-- Schedule section -->
-<section id="schedule" class="section card-section fade-section">
-  <div class="container">
-    <h2>Schedule</h2>
-    <p><strong>Race Day:</strong> Saturday, December&nbsp;12th,&nbsp;2025</p>
-    <p><strong>Check‑in:</strong> 5:00&nbsp;PM&nbsp;–&nbsp;6:30&nbsp;PM</p>
-    <p><strong>First Whistle:</strong> 7:00&nbsp;PM&nbsp;sharp</p>
-    <p><strong>Duration:</strong> Until one runner remains</p>
-  </div>
-</section>
-<section id="route" class="route-section fade">
-  <div class="container">
-    <h2>Course &amp; Route</h2>
-    <div class="location-card">
-  <p><strong>Start/Finish:</strong> <a href="https://maps.app.goo.gl/zKTDGbhMjM6fMgcy8" target="_blank" rel="noopener">Gillmor Way, Park City, UT</a></p>
-  <p>The loop course follows gravel, single track, and greenway paths through Round Valley. See the full route preview below.</p>
-</div>
-    <div class="route-embed">
-      <p><a class="btn btn-text" href="https://www.strava.com/routes/3421647455547610884" target="_blank" rel="noopener">Open on Strava</a></p>
-<div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3421647455547610884" data-style="standard" data-slippy="true"></div>
-<script src="https://strava-embeds.com/embed.js"></script>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Distance</h3>
+        <p>4.167 miles on the hour, every hour, until one runner is left standing.</p>
+      </div>
+      <div class="info-card">
+        <h3>Course feel</h3>
+        <p>Mixed terrain, changing light, and enough trail to punish bad pacing.</p>
+      </div>
+      <div class="info-card">
+        <h3>Crew support</h3>
+        <p>You will have access to your crew and gear between laps, but not much time to waste.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<section id="format" class="section dark fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Format</span>
+      <h2>The backyard ultra format</h2>
+      <p>A backyard ultra is not about one big move. It is about how many times you can calmly do your job and come back ready for the next whistle.</p>
+    </div>
 
-<!-- Route section -->
-
-
-<!-- Strategy section -->
-<section id="strategy" class="section dark card-section fade-section">
-  <div class="container">
-    <h2>Lap Timing &amp; Strategy</h2>
-    <p>The backyard ultra format is as much mental as it is physical. Here's what makes it unique:</p>
     <ul class="bullet-list">
-      <li>Faster runners have more rest: complete the lap in 45 minutes, rest for 15 minutes</li>
-      <li>No set finish time: the race could last 12 hours or 48+ hours</li>
-      <li>Night running: bring headlamps and be prepared for darkness</li>
-      <li>Crew support: use your rest time wisely for nutrition, gear changes, and recovery</li>
+      <li>Each lap is 4.167 miles, which adds up to 100 miles in 24 laps.</li>
+      <li>All runners begin each new lap together at the top of the hour.</li>
+      <li>Your recovery time is whatever remains after you finish the previous lap.</li>
+      <li>The event ends only when one runner finishes a lap that no other runner completes.</li>
     </ul>
-    <p class="warning">Important: The mountain terrain and unique format make this extremely challenging. Proper training, mental preparation, and a solid support crew are essential. Most runners will not finish beyond 12–24 hours.</p>
   </div>
 </section>
 
-<!-- Support section -->
-<section id="support" class="section card-section fade-section">
-  <div class="container">
-    <h2>Aid Station &amp; Support</h2>
-    <p>A fully stocked aid station will be available at the start/finish area between laps.</p>
+<section id="rules" class="section fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Rules</span>
+      <h2>What gets you to the next lap</h2>
+      <p>The rules are simple. Following them late in the race is the hard part.</p>
+    </div>
+
     <ul class="check-list">
-      <li>Water and electrolyte drinks</li>
-      <li>Energy gels, bars, and real food options</li>
-      <li>Medical support on site 24/7</li>
-      <li>Dedicated crew area for personal support teams</li>
-      <li>Covered rest area with seating</li>
+      <li>Complete each loop in under 60 minutes.</li>
+      <li>Be present at the start line at the beginning of every new hour.</li>
+      <li>Missing a start or failing to finish a lap in time results in a DNF.</li>
+      <li>Prize laps and milestone recognition may be awarded during the event.</li>
+      <li>The final finisher is the last runner able to complete a lap alone.</li>
     </ul>
   </div>
 </section>
 
-<!-- Contact Us section -->
+<section id="schedule" class="section fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Schedule</span>
+      <h2>Race day timing</h2>
+      <p>Here is the timing you need for race day.</p>
+    </div>
+
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <h3>Check-in</h3>
+        <p>5:00 PM to 6:30 PM</p>
+      </div>
+      <div class="schedule-card">
+        <h3>Briefing</h3>
+        <p>Last gear check, final crew setup, and any quick questions before we get moving.</p>
+      </div>
+      <div class="schedule-card">
+        <h3>First whistle</h3>
+        <p>6:00 PM sharp</p>
+      </div>
+      <div class="schedule-card">
+        <h3>Finish</h3>
+        <p>When only one runner can still answer the bell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="route" class="section route-section fade-section">
+  <div class="container">
+    <div class="section-intro">
+      <span class="section-label">Course</span>
+      <h2>Route and location</h2>
+      <p>Look at the route before you arrive. The runners who handle this format best usually know what they are getting into.</p>
+    </div>
+
+    <div class="location-card">
+      <p><strong>Start and finish:</strong> <a href="https://maps.app.goo.gl/zKTDGbhMjM6fMgcy8" target="_blank" rel="noopener">Gillmor Way, Park City, UT</a></p>
+      <p>The loop moves through gravel, greenway, and single-track in Round Valley. Study it now so you are not learning the whole course under fatigue.</p>
+    </div>
+
+    <div class="route-embed">
+      <p><a class="btn-text" href="https://www.strava.com/routes/3421647455547610884" target="_blank" rel="noopener">Open the route on Strava</a></p>
+      <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3421647455547610884" data-style="standard" data-slippy="true"></div>
+      <script src="https://strava-embeds.com/embed.js"></script>
+    </div>
+  </div>
+</section>
+
+<section id="strategy" class="section dark fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Strategy</span>
+      <h2>Lap timing and pacing</h2>
+      <p>Most runners do not get knocked out by one big mistake. They get knocked out by a bunch of small ones that start early.</p>
+    </div>
+
+    <ul class="bullet-list">
+      <li>Finishing faster only matters if it improves recovery and keeps your next lap calm.</li>
+      <li>Night running changes how technical sections feel, so treat early laps as preparation for later ones.</li>
+      <li>Use your rest window for fueling, layers, and crew communication before sitting down too long.</li>
+      <li>Do not build your day around one number. Build it around being ready if the race goes longer than you hoped.</li>
+    </ul>
+
+    <p class="warning">Important: this format looks controlled right up until it is not. Train for repeated starts, uneven footing, and making good decisions when you are tired.</p>
+  </div>
+</section>
+
+<section id="support" class="section fade-section">
+  <div class="container card-section">
+    <div class="section-intro">
+      <span class="section-label">Support</span>
+      <h2>Aid station and crew setup</h2>
+      <p>Here is what you can count on between laps.</p>
+    </div>
+
+    <ul class="check-list">
+      <li>Water and electrolyte drinks available at the start-finish area.</li>
+      <li>Energy gels, bars, and real food options for quick refueling.</li>
+      <li>Medical support available on site.</li>
+      <li>Dedicated crew space for personal supplies and between-lap support.</li>
+      <li>Rest seating and covered support areas available near the main hub.</li>
+    </ul>
+  </div>
+</section>
+
 <section class="section contact-section fade-section">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Need more details? Send us a message and we'll be in touch.</p>
-    <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="section-intro">
+      <span class="section-label">Need help</span>
+      <h2>Ask before race day</h2>
+      <p>If you are unsure about gear, timing, crew support, or the course, ask before race day.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-panel panel">
+        <h3>Best questions for this form</h3>
+        <div class="contact-list">
+          <div>
+            <strong>Runners</strong>
+            <span>Course questions, logistics, timing, and gear guidance</span>
+          </div>
+          <div>
+            <strong>Crews</strong>
+            <span>Access, support setup, and what to expect between laps</span>
+          </div>
+          <div>
+            <strong>Volunteers</strong>
+            <span>Ways to help before, during, and after the event</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-info">
-      <p>An unforgettable backyard ultramarathon experience in Park City, Utah.</p>
-      <p><strong>Location:</strong> Round Valley, Utah </p>
+      <p>The information runners and crews need before they show up and get to work.</p>
+      <p><strong>Location:</strong> Round Valley, Park City, Utah</p>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="photos.html">Photos</a>
       <a href="results.html">Results</a>
-      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank">Register Now</a>
+      <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
     </div>
   </div>
-  <div class="container">
-    <p>&copy; 2025 The Wasatch Yard. All rights reserved.</p>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Scripts: fade-in and mobile menu toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Fade-in on scroll
     const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(function(entries, obs) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(function(el) { observer.observe(el); });
-    // Mobile menu toggle
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(function(el) {
+      observer.observe(el);
+    });
+
     const hamburger = document.getElementById('hamburger');
     const nav = document.querySelector('.navbar nav');
-    hamburger.addEventListener('click', function() {
+
+    function toggleMenu() {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-      hamburger.setAttribute('aria-expanded', !expanded);
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
     });
   });
 </script>
-
 
 </body>
 </html>
