@@ -75,35 +75,10 @@
     <div class="section-intro">
       <span class="section-label">Gallery</span>
       <h2>Scenes from The Wasatch Yard</h2>
-      <p>These are the moments worth catching once the work starts.</p>
+      <p><span id="photo-count">74</span> race-day photos from the gallery folder. Click any image to open it full size.</p>
     </div>
 
-    <div class="gallery-grid">
-      <article class="gallery-card">
-        <h3>Start line energy</h3>
-        <p>Opening laps, pre-race nerves, and the first whistle.</p>
-      </article>
-      <article class="gallery-card">
-        <h3>Round Valley terrain</h3>
-        <p>Course views that help runners understand the feel of the loop.</p>
-      </article>
-      <article class="gallery-card">
-        <h3>Night racing</h3>
-        <p>Headlamps, fatigue, and the atmosphere after dark.</p>
-      </article>
-      <article class="gallery-card">
-        <h3>Crew support</h3>
-        <p>The small between-lap moments that define a backyard ultra.</p>
-      </article>
-      <article class="gallery-card">
-        <h3>Finish-line grit</h3>
-        <p>The deeper the race goes, the stronger the visuals become.</p>
-      </article>
-      <article class="gallery-card">
-        <h3>Community moments</h3>
-        <p>Volunteers, spectators, and the feel of the event beyond the course.</p>
-      </article>
-    </div>
+    <div class="photo-wall" id="photo-wall"></div>
   </div>
 </section>
 
@@ -187,8 +162,179 @@
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo viewer">Close</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
+  <div class="lightbox-stage">
+    <img id="lightbox-image" src="" alt="">
+    <div class="lightbox-meta">
+      <p class="lightbox-count" id="lightbox-count"></p>
+      <p class="lightbox-name" id="lightbox-name"></p>
+    </div>
+  </div>
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    const photoFiles = [
+      'EditedBackyard.jpg',
+      'EditedBackyard-4.jpg',
+      'EditedBackyard-7.jpg',
+      'EditedBackyard-9.jpg',
+      'EditedBackyard-11.jpg',
+      'EditedBackyard-12.jpg',
+      'EditedBackyard-14.jpg',
+      'EditedBackyard-16.jpg',
+      'EditedBackyard-18.jpg',
+      'EditedBackyard-19.jpg',
+      'EditedBackyard-20.jpg',
+      'EditedBackyard-21.jpg',
+      'EditedBackyard-23.jpg',
+      'EditedBackyard-24.jpg',
+      'EditedBackyard-26.jpg',
+      'EditedBackyard-28.jpg',
+      'EditedBackyard-30.jpg',
+      'EditedBackyard-33.jpg',
+      'EditedBackyard-37.jpg',
+      'EditedBackyard-38.jpg',
+      'EditedBackyard-42.jpg',
+      'EditedBackyard-44.jpg',
+      'EditedBackyard-46.jpg',
+      'EditedBackyard-48.jpg',
+      'EditedBackyard-49.jpg',
+      'EditedBackyard-51.jpg',
+      'EditedBackyard-52.jpg',
+      'EditedBackyard-54.jpg',
+      'EditedBackyard-55.jpg',
+      'EditedBackyard-56.jpg',
+      'EditedBackyard-57.jpg',
+      'EditedBackyard-59.jpg',
+      'EditedBackyard-60.jpg',
+      'EditedBackyard-61.jpg',
+      'EditedBackyard-62.jpg',
+      'EditedBackyard-63.jpg',
+      'EditedBackyard-64.jpg',
+      'EditedBackyard-66.jpg',
+      'EditedBackyard-68.jpg',
+      'EditedBackyard-69.jpg',
+      'EditedBackyard-71.jpg',
+      'EditedBackyard-73.jpg',
+      'EditedBackyard-75.jpg',
+      'EditedBackyard-76.jpg',
+      'EditedBackyard-79.jpg',
+      'EditedBackyard-81.jpg',
+      'EditedBackyard-82.jpg',
+      'EditedBackyard-83.jpg',
+      'EditedBackyard-84.jpg',
+      'EditedBackyard-85.jpg',
+      'EditedBackyard-86.jpg',
+      'EditedBackyard-88.jpg',
+      'EditedBackyard-89.jpg',
+      'EditedBackyard-90.jpg',
+      'EditedBackyard-91.jpg',
+      'EditedBackyard-92.jpg',
+      'EditedBackyard-93.jpg',
+      'EditedBackyard-95.jpg',
+      'EditedBackyard-97.jpg',
+      'EditedBackyard-98.jpg',
+      'EditedBackyard-100.jpg',
+      'EditedBackyard-102.jpg',
+      'EditedBackyard-103.jpg',
+      'EditedBackyard-105.jpg',
+      'EditedBackyard-106.jpg',
+      'EditedBackyard-109.jpg',
+      'EditedBackyard-110.jpg',
+      'TO106589.jpg',
+      'TO106596.jpg',
+      'TO106601.jpg',
+      'TO106609.jpg',
+      'TO106632.jpg',
+      'TO106648.jpg',
+      'TO106656.jpg'
+    ];
+
+    const photoWall = document.getElementById('photo-wall');
+    const photoCount = document.getElementById('photo-count');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCount = document.getElementById('lightbox-count');
+    const lightboxName = document.getElementById('lightbox-name');
+    const closeLightboxButton = document.getElementById('lightbox-close');
+    const previousButton = document.getElementById('lightbox-prev');
+    const nextButton = document.getElementById('lightbox-next');
+    let activePhotoIndex = 0;
+
+    function formatPhotoName(fileName) {
+      return fileName.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+    }
+
+    function showPhoto(index) {
+      activePhotoIndex = (index + photoFiles.length) % photoFiles.length;
+      const fileName = photoFiles[activePhotoIndex];
+      const photoPath = 'assets/gallery/' + fileName;
+      lightboxImage.src = photoPath;
+      lightboxImage.alt = 'The Wasatch Yard race photo ' + (activePhotoIndex + 1);
+      lightboxCount.textContent = 'Photo ' + (activePhotoIndex + 1) + ' of ' + photoFiles.length;
+      lightboxName.textContent = formatPhotoName(fileName);
+    }
+
+    function openLightbox(index) {
+      showPhoto(index);
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.src = '';
+    }
+
+    if (photoWall) {
+      photoFiles.forEach(function(fileName, index) {
+        const link = document.createElement('a');
+        link.className = 'photo-tile';
+        link.href = 'assets/gallery/' + fileName;
+        link.setAttribute('aria-label', 'Open photo ' + (index + 1) + ' in viewer');
+        link.dataset.photoIndex = String(index);
+
+        const image = document.createElement('img');
+        image.loading = 'lazy';
+        image.src = 'assets/gallery/' + fileName;
+        image.alt = 'The Wasatch Yard race photo ' + (index + 1);
+
+        link.appendChild(image);
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          openLightbox(index);
+        });
+        photoWall.appendChild(link);
+      });
+    }
+
+    if (photoCount) {
+      photoCount.textContent = String(photoFiles.length);
+    }
+
+    previousButton.addEventListener('click', function() {
+      showPhoto(activePhotoIndex - 1);
+    });
+
+    nextButton.addEventListener('click', function() {
+      showPhoto(activePhotoIndex + 1);
+    });
+
+    closeLightboxButton.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', function(event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
     const fadeEls = document.querySelectorAll('.fade-section');
     const observer = new IntersectionObserver(function(entries, obs) {
       entries.forEach(function(entry) {
@@ -217,6 +363,24 @@
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         toggleMenu();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (!lightbox.classList.contains('open')) {
+        return;
+      }
+
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+
+      if (event.key === 'ArrowLeft') {
+        showPhoto(activePhotoIndex - 1);
+      }
+
+      if (event.key === 'ArrowRight') {
+        showPhoto(activePhotoIndex + 1);
       }
     });
   });
