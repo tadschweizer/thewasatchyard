@@ -76,41 +76,7 @@
       <p><span id="photo-count">74</span> race-day photos from the gallery folder. Click any image to open it full size.</p>
     </div>
 
-    <div class="featured-gallery">
-      <div class="featured-copy">
-        <span class="section-label">Featured</span>
-        <h3>A few from race day</h3>
-        <p>Some photos deserve a little more room. These featured frames sit up top, and the full gallery stays below.</p>
-      </div>
-      <div class="featured-grid" id="featured-grid"></div>
-    </div>
-
     <div class="photo-wall" id="photo-wall"></div>
-  </div>
-</section>
-
-<section class="section dark section-band fade-section">
-  <div class="container card-section">
-    <div class="section-intro">
-      <span class="section-label">Photo guidance</span>
-      <h2>What we want to show</h2>
-      <p>The best race galleries show the whole day, not just the start and finish.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Lead with the best image</h3>
-        <p>Lead with the image that best captures what this race feels like.</p>
-      </div>
-      <div class="card">
-        <h3>Keep captions short</h3>
-        <p>Keep the captions short and let the images carry the page.</p>
-      </div>
-      <div class="card">
-        <h3>Show variety</h3>
-        <p>Show the course, the people, the crew area, and the late-race suffering that defines the format.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -124,7 +90,6 @@
 
     <div class="contact-grid">
       <div class="contact-panel panel">
-        <h3>What to send</h3>
         <div class="contact-list">
           <div>
             <strong>Photo submissions</strong>
@@ -262,7 +227,6 @@
     ];
 
     const photoWall = document.getElementById('photo-wall');
-    const featuredGrid = document.getElementById('featured-grid');
     const photoCount = document.getElementById('photo-count');
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
@@ -325,13 +289,6 @@
     if (photoWall) {
       photoFiles.forEach(function(fileName, index) {
         photoWall.appendChild(buildPhotoTile(fileName, index, 'wall-photo'));
-      });
-    }
-
-    if (featuredGrid) {
-      photoFiles.slice(0, 5).forEach(function(fileName, index) {
-        const featureClass = index === 0 ? 'featured-photo featured-photo-large' : 'featured-photo';
-        featuredGrid.appendChild(buildPhotoTile(fileName, index, featureClass));
       });
     }
 
