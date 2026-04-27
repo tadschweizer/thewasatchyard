@@ -969,6 +969,37 @@ textarea {
   column-gap: 1rem;
 }
 
+.featured-gallery {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: start;
+}
+
+.featured-copy {
+  padding: 1.35rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.featured-copy h3 {
+  margin: 0.25rem 0 0.55rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+
+.featured-copy p {
+  margin: 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .photo-tile {
   display: block;
   break-inside: avoid;
@@ -991,6 +1022,27 @@ textarea {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.featured-photo {
+  margin: 0;
+  min-height: 220px;
+}
+
+.featured-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.featured-photo-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.featured-photo-large img {
+  min-height: 460px;
 }
 
 .lightbox {
@@ -1252,6 +1304,10 @@ tbody tr:hover {
   .sponsor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .featured-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 860px) {
@@ -1361,6 +1417,24 @@ tbody tr:hover {
     column-gap: 0.8rem;
   }
 
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .featured-photo,
+  .featured-photo img {
+    min-height: 180px;
+  }
+
+  .featured-photo-large {
+    grid-column: span 2;
+  }
+
+  .featured-photo-large img {
+    min-height: 280px;
+  }
+
   .lightbox {
     padding: 1rem 0.75rem 1.5rem;
     gap: 0.5rem;
@@ -1456,6 +1530,24 @@ tbody tr:hover {
 
   .photo-wall {
     columns: 1;
+  }
+
+  .featured-copy {
+    padding: 1.1rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-photo-large,
+  .featured-photo {
+    grid-column: auto;
+  }
+
+  .featured-photo img,
+  .featured-photo-large img {
+    min-height: 220px;
   }
 
   .photo-tile {

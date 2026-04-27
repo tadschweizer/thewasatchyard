@@ -78,6 +78,15 @@
       <p><span id="photo-count">74</span> race-day photos from the gallery folder. Click any image to open it full size.</p>
     </div>
 
+    <div class="featured-gallery">
+      <div class="featured-copy">
+        <span class="section-label">Featured</span>
+        <h3>A few from race day</h3>
+        <p>Some photos deserve a little more room. These featured frames sit up top, and the full gallery stays below.</p>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </div>
+
     <div class="photo-wall" id="photo-wall"></div>
   </div>
 </section>
@@ -255,6 +264,7 @@
     ];
 
     const photoWall = document.getElementById('photo-wall');
+    const featuredGrid = document.getElementById('featured-grid');
     const photoCount = document.getElementById('photo-count');
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
@@ -267,6 +277,27 @@
 
     function formatPhotoName(fileName) {
       return fileName.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+    }
+
+    function buildPhotoTile(fileName, index, extraClass) {
+      const link = document.createElement('a');
+      link.className = extraClass ? 'photo-tile ' + extraClass : 'photo-tile';
+      link.href = 'assets/gallery/' + fileName;
+      link.setAttribute('aria-label', 'Open photo ' + (index + 1) + ' in viewer');
+      link.dataset.photoIndex = String(index);
+
+      const image = document.createElement('img');
+      image.loading = 'lazy';
+      image.src = 'assets/gallery/' + fileName;
+      image.alt = 'The Wasatch Yard race photo ' + (index + 1);
+
+      link.appendChild(image);
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        openLightbox(index);
+      });
+
+      return link;
     }
 
     function showPhoto(index) {
@@ -295,23 +326,14 @@
 
     if (photoWall) {
       photoFiles.forEach(function(fileName, index) {
-        const link = document.createElement('a');
-        link.className = 'photo-tile';
-        link.href = 'assets/gallery/' + fileName;
-        link.setAttribute('aria-label', 'Open photo ' + (index + 1) + ' in viewer');
-        link.dataset.photoIndex = String(index);
+        photoWall.appendChild(buildPhotoTile(fileName, index, 'wall-photo'));
+      });
+    }
 
-        const image = document.createElement('img');
-        image.loading = 'lazy';
-        image.src = 'assets/gallery/' + fileName;
-        image.alt = 'The Wasatch Yard race photo ' + (index + 1);
-
-        link.appendChild(image);
-        link.addEventListener('click', function(event) {
-          event.preventDefault();
-          openLightbox(index);
-        });
-        photoWall.appendChild(link);
+    if (featuredGrid) {
+      photoFiles.slice(0, 5).forEach(function(fileName, index) {
+        const featureClass = index === 0 ? 'featured-photo featured-photo-large' : 'featured-photo';
+        featuredGrid.appendChild(buildPhotoTile(fileName, index, featureClass));
       });
     }
 
