@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
   --bg: #140d18;
@@ -21,6 +21,9 @@
   --max-width: 1180px;
   --nav-height: 86px;
   --transition: 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --display-font: "Bebas Neue", "Impact", sans-serif;
+  --body-font: "Space Mono", "Manrope", monospace;
+  --headline-spacing: 0.08em;
 }
 
 * {
@@ -39,13 +42,15 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--body-font);
   line-height: 1.6;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(172, 48, 75, 0.24), transparent 34%),
     radial-gradient(circle at 75% 25%, rgba(100, 25, 63, 0.22), transparent 36%),
-    linear-gradient(180deg, #120b17 0%, #180d1d 45%, #231227 100%);
+    linear-gradient(180deg, #0d0811 0%, #160a16 52%, #26102a 100%);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 body.lightbox-open {
@@ -60,13 +65,14 @@ body::before {
   background:
     linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
     repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.012) 0,
-      rgba(255, 255, 255, 0.012) 1px,
+      110deg,
+      rgba(255, 255, 255, 0.018) 0,
+      rgba(255, 255, 255, 0.018) 1px,
       transparent 1px,
-      transparent 18px
+      transparent 16px
     );
-  opacity: 0.45;
+  mix-blend-mode: screen;
+  opacity: 0.5;
 }
 
 body::after {
@@ -151,10 +157,10 @@ textarea {
 
 .brand-copy .title {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--display-font);
   font-size: 1.7rem;
   line-height: 0.95;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1em;
 }
 
 .nav-shell {
@@ -195,7 +201,8 @@ textarea {
   justify-content: center;
   min-height: 44px;
   padding: 0.7rem 0.9rem;
-  border-radius: 12px;
+  border-radius: 2px;
+  border: 1px solid transparent;
   color: var(--muted);
   transition: color var(--transition), background var(--transition), transform var(--transition);
 }
@@ -205,6 +212,7 @@ textarea {
 .navbar nav ul li a.active {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(240, 206, 218, 0.5);
 }
 
 .btn-primary,
@@ -378,10 +386,10 @@ textarea {
 
 .hero h1 {
   margin: 0.75rem 0 0.8rem;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--display-font);
   font-size: clamp(3.35rem, 8vw, 6.2rem);
   line-height: 0.92;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--headline-spacing);
   text-transform: uppercase;
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.12), 0 0 32px rgba(170, 44, 77, 0.42);
   overflow-wrap: anywhere;
@@ -558,9 +566,10 @@ textarea {
 
 .section h2 {
   margin-bottom: 0.2rem;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--display-font);
   font-size: clamp(2.1rem, 4.4vw, 3.25rem);
   line-height: 1;
+  letter-spacing: var(--headline-spacing);
 }
 
 .section p {
