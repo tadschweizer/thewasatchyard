@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root {
-  --bg: #07131d;
-  --bg-soft: #102131;
-  --panel: rgba(11, 25, 38, 0.9);
-  --panel-strong: #12293d;
-  --panel-glow: rgba(255, 255, 255, 0.06);
-  --line: rgba(190, 219, 255, 0.16);
-  --line-strong: rgba(244, 173, 106, 0.35);
-  --text: #eef4f7;
-  --muted: #afbecb;
-  --accent: #f1a55a;
-  --accent-strong: #d86b2b;
-  --accent-cool: #88bdd4;
-  --success: #86c3a3;
-  --shadow: 0 18px 46px rgba(0, 0, 0, 0.36);
-  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.24);
+  --bg: #140d18;
+  --bg-soft: #231327;
+  --panel: rgba(28, 14, 33, 0.9);
+  --panel-strong: #311735;
+  --panel-glow: rgba(255, 255, 255, 0.05);
+  --line: rgba(227, 178, 206, 0.2);
+  --line-strong: rgba(182, 48, 75, 0.5);
+  --text: #f7f2f6;
+  --muted: #d4bdca;
+  --accent: #d14463;
+  --accent-strong: #941e3e;
+  --accent-cool: #f0ceda;
+  --success: #d88ba3;
+  --shadow: 0 18px 46px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.34);
   --radius: 18px;
   --radius-sm: 12px;
   --max-width: 1180px;
@@ -43,9 +43,9 @@ body {
   line-height: 1.6;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(142, 187, 214, 0.18), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(241, 165, 90, 0.11), transparent 24%),
-    linear-gradient(180deg, #08131c 0%, #091824 48%, #102130 100%);
+    radial-gradient(circle at top left, rgba(172, 48, 75, 0.24), transparent 34%),
+    radial-gradient(circle at 75% 25%, rgba(100, 25, 63, 0.22), transparent 36%),
+    linear-gradient(180deg, #120b17 0%, #180d1d 45%, #231227 100%);
 }
 
 body.lightbox-open {
@@ -103,8 +103,8 @@ textarea {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(18px);
-  background: rgba(5, 14, 23, 0.84);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(20, 10, 24, 0.9);
+  border-bottom: 1px solid rgba(209, 68, 99, 0.35);
 }
 
 .nav-inner {
@@ -164,12 +164,14 @@ textarea {
 }
 
 .nav-badge {
-  padding: 0.55rem 0.85rem;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: 2px;
+  border: 1px solid rgba(209, 68, 99, 0.45);
+  background: rgba(18, 11, 24, 0.94);
+  color: #eedbe3;
   font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -234,9 +236,9 @@ textarea {
 .btn-primary,
 .btn-nav,
 .contact-form button {
-  color: #111;
-  background: linear-gradient(135deg, #f3bf74 0%, #e78546 100%);
-  box-shadow: 0 14px 30px rgba(232, 133, 70, 0.28);
+  color: #fff4f7;
+  background: linear-gradient(135deg, #d14463 0%, #9d2747 100%);
+  box-shadow: 0 14px 30px rgba(156, 36, 68, 0.34);
 }
 
 .btn-secondary,
@@ -257,7 +259,7 @@ textarea {
 .btn-primary:hover,
 .btn-nav:hover,
 .contact-form button:hover {
-  box-shadow: 0 18px 34px rgba(232, 133, 70, 0.36);
+  box-shadow: 0 18px 34px rgba(156, 36, 68, 0.42);
 }
 
 .hamburger {
@@ -292,7 +294,7 @@ textarea {
   min-height: calc(94vh - var(--nav-height));
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(6, 16, 25, 0.86) 0%, rgba(6, 16, 25, 0.42) 55%, rgba(6, 16, 25, 0.75) 100%),
+    linear-gradient(90deg, rgba(26, 11, 30, 0.9) 0%, rgba(26, 11, 30, 0.45) 55%, rgba(26, 11, 30, 0.82) 100%),
     url("assets/hero.jpg") center/cover;
 }
 
@@ -301,9 +303,9 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(6, 16, 25, 0.24), rgba(6, 16, 25, 0.78)),
-    radial-gradient(circle at 18% 22%, rgba(136, 189, 212, 0.2), transparent 18%),
-    radial-gradient(circle at 80% 18%, rgba(241, 165, 90, 0.22), transparent 14%);
+    linear-gradient(180deg, rgba(26, 11, 30, 0.24), rgba(26, 11, 30, 0.82)),
+    radial-gradient(circle at 18% 22%, rgba(240, 206, 218, 0.2), transparent 18%),
+    radial-gradient(circle at 80% 18%, rgba(209, 68, 99, 0.3), transparent 16%);
 }
 
 .hero .overlay {
@@ -363,11 +365,11 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(136, 189, 212, 0.12);
-  border: 1px solid rgba(136, 189, 212, 0.2);
-  color: var(--accent-cool);
+  padding: 0.35rem 0.75rem;
+  border-radius: 2px;
+  background: rgba(18, 11, 24, 0.92);
+  border: 1px solid rgba(209, 68, 99, 0.42);
+  color: #f0dde5;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -379,7 +381,9 @@ textarea {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(3.35rem, 8vw, 6.2rem);
   line-height: 0.92;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.12), 0 0 32px rgba(170, 44, 77, 0.42);
   overflow-wrap: anywhere;
 }
 
@@ -535,11 +539,15 @@ textarea {
 }
 
 .section-label {
-  color: var(--accent-cool);
+  color: #eedbe3;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
   font-weight: 800;
+  background: rgba(18, 11, 24, 0.92);
+  border: 1px solid rgba(209, 68, 99, 0.42);
+  padding: 0.3rem 0.65rem;
+  width: fit-content;
 }
 
 .section h2,
