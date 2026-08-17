@@ -122,11 +122,12 @@ textarea {
   gap: 1rem;
 }
 
+/* The wordmark never compresses; the nav gives up the date badge instead. */
 .brand {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 1rem;
-  min-width: 0;
   text-decoration: none;
 }
 
@@ -164,11 +165,18 @@ textarea {
 
 .nav-shell {
   display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
 .nav-badge {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 0.35rem 0.75rem;
   border-radius: 2px;
   border: 1px solid rgba(209, 68, 99, 0.45);
@@ -1578,8 +1586,9 @@ tbody tr:hover {
   }
 }
 
-/* The date badge is the first thing to give up room once the nav gets tight. */
-@media (max-width: 1240px) {
+/* The date badge is the first thing to give up room once the nav gets tight.
+   Six nav items plus the wordmark need the full width below this. */
+@media (max-width: 1500px) {
   .nav-badge {
     display: none;
   }
