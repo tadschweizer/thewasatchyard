@@ -3,38 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Wasatch Yard - Photos</title>
-  <link rel="icon" href="assets/favicon.png">
+  <title>Race Photos | The Wasatch Yard Backyard Ultra, Park City</title>
+  <meta name="description" content="Race-day photos from The Wasatch Yard backyard ultra in Round Valley, Park City, Utah: the start line, the crew zone, and headlamps deep into the night.">
+  <link rel="canonical" href="https://wasatchyard.com/photos.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#140d18">
+  <meta name="geo.region" content="US-UT">
+  <meta name="geo.placename" content="Park City, Utah">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Wasatch Yard">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://wasatchyard.com/photos.html">
+  <meta property="og:title" content="Race Photos | The Wasatch Yard Backyard Ultra">
+  <meta property="og:description" content="Race-day photos from The Wasatch Yard backyard ultra in Round Valley, Park City, Utah.">
+  <meta property="og:image" content="https://wasatchyard.com/assets/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Wasatch Yard backyard ultra, Park City, Utah, Friday October 23, 2026">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Race Photos | The Wasatch Yard Backyard Ultra">
+  <meta name="twitter:description" content="Race-day photos from The Wasatch Yard backyard ultra in Round Valley, Park City, Utah.">
+  <meta name="twitter:image" content="https://wasatchyard.com/assets/og-card.jpg">
+
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="assets/favicon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script src="assets/site.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wasatchyard.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Photos", "item": "https://wasatchyard.com/photos.html" }
+        ]
+      },
+      {
+        "@type": "ImageGallery",
+        "name": "The Wasatch Yard race photo gallery",
+        "url": "https://wasatchyard.com/photos.html",
+        "description": "Race-day photographs from The Wasatch Yard backyard ultra in Round Valley, Park City, Utah.",
+        "about": {
+          "@type": "SportsEvent",
+          "name": "The Wasatch Yard Backyard Ultra",
+          "url": "https://wasatchyard.com/"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="photos-page">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header class="navbar">
   <div class="container nav-inner">
-    <div class="brand">
-      <div class="brand-mark" aria-label="The Wasatch Yard logo">
-        <img src="assets/favicon.png" alt="The Wasatch Yard logo">
+    <a class="brand" href="index.html" aria-label="The Wasatch Yard home">
+      <div class="brand-mark">
+        <img src="assets/logo-mark.png" alt="" width="42" height="42">
       </div>
       <div class="brand-copy">
         <p class="eyebrow">Backyard Ultra</p>
         <p class="title">The Wasatch Yard</p>
       </div>
-    </div>
+    </a>
 
     <div class="nav-shell">
       <div class="nav-badge">Race-day photo gallery</div>
-      <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
-        <div class="hamburger-inner">
+      <button class="hamburger" id="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="hamburger-inner" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
-        </div>
-      </div>
-      <nav>
+        </span>
+      </button>
+      <nav id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="race-info.html">Race Info</a></li>
-          <li><a href="photos.html" class="active">Photos</a></li>
+          <li><a href="backyard-ultra-guide.html">The Format</a></li>
+          <li><a href="photos.html" class="active" aria-current="page">Photos</a></li>
           <li><a href="results.html">Results</a></li>
           <li><a class="btn-nav" href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a></li>
         </ul>
@@ -43,8 +102,9 @@
   </div>
 </header>
 
+<main id="main">
+
 <section class="hero small-hero">
-  <div class="overlay"></div>
   <div class="container hero-grid">
     <div class="hero-card content">
       <div class="hero-kicker">Race day moments</div>
@@ -55,7 +115,6 @@
         <p class="event-date">We will keep this gallery updated as new race photos come in.</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -64,10 +123,15 @@
     <div class="section-intro">
       <span class="section-label">Gallery</span>
       <h2>Scenes from The Wasatch Yard</h2>
-      <p><span id="photo-count">74</span> race-day photos from the gallery folder. Click any image to open it full size.</p>
+      <p><span id="photo-count">74</span> race-day photos from Round Valley, Park City. Select any image to open it full size.</p>
     </div>
 
     <div class="photo-wall" id="photo-wall"></div>
+    <noscript>
+      <p>The photo gallery needs JavaScript to load. You can still browse race-day images in the
+        <a href="https://ultrasignup.com/results_event.aspx?did=131654" target="_blank" rel="noopener">event listing on UltraSignup</a>
+        or get in touch through the form below.</p>
+    </noscript>
   </div>
 </section>
 
@@ -81,6 +145,7 @@
 
     <div class="contact-grid">
       <div class="contact-panel panel">
+        <h3>Get in touch about photos</h3>
         <div class="contact-list">
           <div>
             <strong>Photo submissions</strong>
@@ -98,14 +163,21 @@
       </div>
 
       <form class="contact-form" action="https://formspree.io/f/xldobnzq" method="POST">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="hidden" name="_subject" value="Wasatch Yard photo enquiry">
+        <p class="sr-only" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+        <label class="sr-only" for="contact-name">Your name</label>
+        <input id="contact-name" type="text" name="Name" autocomplete="name" placeholder="Your Name" required>
+        <label class="sr-only" for="contact-email">Your email address</label>
+        <input id="contact-email" type="email" name="Email" autocomplete="email" placeholder="Your Email" required>
+        <label class="sr-only" for="contact-message">Your message</label>
+        <textarea id="contact-message" name="Message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="footer">
   <div class="container">
@@ -113,253 +185,31 @@
       <p>Race-day photos, crew moments, and the parts of the event people will still remember later.</p>
       <p><strong>Location:</strong> Park City, Utah</p>
     </div>
-    <div class="footer-links">
+    <nav class="footer-links" aria-label="Footer">
       <a href="index.html">Home</a>
       <a href="race-info.html">Race Info</a>
+      <a href="backyard-ultra-guide.html">Backyard Ultra Guide</a>
       <a href="results.html">Results</a>
       <a href="https://ultrasignup.com/register.aspx?did=131654" target="_blank" rel="noopener">Register</a>
-    </div>
+    </nav>
   </div>
   <div class="container footer-bottom">
     <p>&copy; 2026 The Wasatch Yard. All rights reserved.</p>
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Race photo viewer" aria-hidden="true">
   <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo viewer">Close</button>
   <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous photo">&#10094;</button>
   <div class="lightbox-stage">
     <img id="lightbox-image" src="" alt="">
     <div class="lightbox-meta">
       <p class="lightbox-count" id="lightbox-count"></p>
-      <p class="lightbox-name" id="lightbox-name"></p>
+      <p><a class="lightbox-full" id="lightbox-full" href="#" target="_blank" rel="noopener">Open full size in a new tab</a></p>
     </div>
   </div>
   <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next photo">&#10095;</button>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const photoFiles = [
-      'EditedBackyard.jpg',
-      'EditedBackyard-4.jpg',
-      'EditedBackyard-7.jpg',
-      'EditedBackyard-9.jpg',
-      'EditedBackyard-11.jpg',
-      'EditedBackyard-12.jpg',
-      'EditedBackyard-14.jpg',
-      'EditedBackyard-16.jpg',
-      'EditedBackyard-18.jpg',
-      'EditedBackyard-19.jpg',
-      'EditedBackyard-20.jpg',
-      'EditedBackyard-21.jpg',
-      'EditedBackyard-23.jpg',
-      'EditedBackyard-24.jpg',
-      'EditedBackyard-26.jpg',
-      'EditedBackyard-28.jpg',
-      'EditedBackyard-30.jpg',
-      'EditedBackyard-33.jpg',
-      'EditedBackyard-37.jpg',
-      'EditedBackyard-38.jpg',
-      'EditedBackyard-42.jpg',
-      'EditedBackyard-44.jpg',
-      'EditedBackyard-46.jpg',
-      'EditedBackyard-48.jpg',
-      'EditedBackyard-49.jpg',
-      'EditedBackyard-51.jpg',
-      'EditedBackyard-52.jpg',
-      'EditedBackyard-54.jpg',
-      'EditedBackyard-55.jpg',
-      'EditedBackyard-56.jpg',
-      'EditedBackyard-57.jpg',
-      'EditedBackyard-59.jpg',
-      'EditedBackyard-60.jpg',
-      'EditedBackyard-61.jpg',
-      'EditedBackyard-62.jpg',
-      'EditedBackyard-63.jpg',
-      'EditedBackyard-64.jpg',
-      'EditedBackyard-66.jpg',
-      'EditedBackyard-68.jpg',
-      'EditedBackyard-69.jpg',
-      'EditedBackyard-71.jpg',
-      'EditedBackyard-73.jpg',
-      'EditedBackyard-75.jpg',
-      'EditedBackyard-76.jpg',
-      'EditedBackyard-79.jpg',
-      'EditedBackyard-81.jpg',
-      'EditedBackyard-82.jpg',
-      'EditedBackyard-83.jpg',
-      'EditedBackyard-84.jpg',
-      'EditedBackyard-85.jpg',
-      'EditedBackyard-86.jpg',
-      'EditedBackyard-88.jpg',
-      'EditedBackyard-89.jpg',
-      'EditedBackyard-90.jpg',
-      'EditedBackyard-91.jpg',
-      'EditedBackyard-92.jpg',
-      'EditedBackyard-93.jpg',
-      'EditedBackyard-95.jpg',
-      'EditedBackyard-97.jpg',
-      'EditedBackyard-98.jpg',
-      'EditedBackyard-100.jpg',
-      'EditedBackyard-102.jpg',
-      'EditedBackyard-103.jpg',
-      'EditedBackyard-105.jpg',
-      'EditedBackyard-106.jpg',
-      'EditedBackyard-109.jpg',
-      'EditedBackyard-110.jpg',
-      'TO106589.jpg',
-      'TO106596.jpg',
-      'TO106601.jpg',
-      'TO106609.jpg',
-      'TO106632.jpg',
-      'TO106648.jpg',
-      'TO106656.jpg'
-    ];
-
-    const photoWall = document.getElementById('photo-wall');
-    const photoCount = document.getElementById('photo-count');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxCount = document.getElementById('lightbox-count');
-    const lightboxName = document.getElementById('lightbox-name');
-    const closeLightboxButton = document.getElementById('lightbox-close');
-    const previousButton = document.getElementById('lightbox-prev');
-    const nextButton = document.getElementById('lightbox-next');
-    let activePhotoIndex = 0;
-
-    function formatPhotoName(fileName) {
-      return fileName.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
-    }
-
-    function buildPhotoTile(fileName, index, extraClass) {
-      const link = document.createElement('a');
-      link.className = extraClass ? 'photo-tile ' + extraClass : 'photo-tile';
-      link.href = 'assets/gallery/' + fileName;
-      link.setAttribute('aria-label', 'Open photo ' + (index + 1) + ' in viewer');
-      link.dataset.photoIndex = String(index);
-
-      const image = document.createElement('img');
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      image.src = 'assets/gallery/' + fileName;
-      image.alt = 'The Wasatch Yard race photo ' + (index + 1);
-      image.addEventListener('error', function() {
-        image.src = 'assets/sponsor-placeholder.png';
-        image.alt = 'Photo unavailable: ' + formatPhotoName(fileName);
-      });
-
-      link.appendChild(image);
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-        openLightbox(index);
-      });
-
-      return link;
-    }
-
-    function showPhoto(index) {
-      activePhotoIndex = (index + photoFiles.length) % photoFiles.length;
-      const fileName = photoFiles[activePhotoIndex];
-      const photoPath = 'assets/gallery/' + fileName;
-      lightboxImage.src = photoPath;
-      lightboxImage.alt = 'The Wasatch Yard race photo ' + (activePhotoIndex + 1);
-      lightboxCount.textContent = 'Photo ' + (activePhotoIndex + 1) + ' of ' + photoFiles.length;
-      lightboxName.textContent = formatPhotoName(fileName);
-    }
-
-    function openLightbox(index) {
-      showPhoto(index);
-      lightbox.classList.add('open');
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('lightbox-open');
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('lightbox-open');
-      lightboxImage.src = '';
-    }
-
-    if (photoWall) {
-      photoFiles.forEach(function(fileName, index) {
-        photoWall.appendChild(buildPhotoTile(fileName, index, 'wall-photo'));
-      });
-    }
-
-    if (photoCount) {
-      photoCount.textContent = String(photoFiles.length);
-    }
-
-    if (previousButton && nextButton && closeLightboxButton) {
-      previousButton.addEventListener('click', function() {
-        showPhoto(activePhotoIndex - 1);
-      });
-
-      nextButton.addEventListener('click', function() {
-        showPhoto(activePhotoIndex + 1);
-      });
-
-      closeLightboxButton.addEventListener('click', closeLightbox);
-    }
-
-    lightbox.addEventListener('click', function(event) {
-      if (event.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    const fadeEls = document.querySelectorAll('.fade-section');
-    const observer = new IntersectionObserver(function(entries, obs) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    fadeEls.forEach(function(el) {
-      observer.observe(el);
-    });
-
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.querySelector('.navbar nav');
-
-    function toggleMenu() {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('open');
-    }
-
-    hamburger.addEventListener('click', toggleMenu);
-    hamburger.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        toggleMenu();
-      }
-    });
-
-    document.addEventListener('keydown', function(event) {
-      if (!lightbox.classList.contains('open')) {
-        return;
-      }
-
-      if (event.key === 'Escape') {
-        closeLightbox();
-      }
-
-      if (event.key === 'ArrowLeft') {
-        showPhoto(activePhotoIndex - 1);
-      }
-
-      if (event.key === 'ArrowRight') {
-        showPhoto(activePhotoIndex + 1);
-      }
-    });
-  });
-</script>
 
 </body>
 </html>

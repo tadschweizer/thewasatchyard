@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
+/* Web fonts are requested from a <link> in each page head so the browser can
+   start fetching them without waiting for this stylesheet to parse. */
 
 :root {
   --bg: #140d18;
@@ -121,11 +122,13 @@ textarea {
   gap: 1rem;
 }
 
+/* The wordmark never compresses; the nav gives up the date badge instead. */
 .brand {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: 1rem;
-  min-width: 0;
+  text-decoration: none;
 }
 
 .brand-mark {
@@ -137,10 +140,6 @@ textarea {
   width: 42px;
   height: 42px;
   object-fit: contain;
-  padding: 0.15rem;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .brand-copy {
@@ -161,15 +160,23 @@ textarea {
   font-size: 1.7rem;
   line-height: 0.95;
   letter-spacing: 0.1em;
+  white-space: nowrap;
 }
 
 .nav-shell {
   display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
 .nav-badge {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 0.35rem 0.75rem;
   border-radius: 2px;
   border: 1px solid rgba(209, 68, 99, 0.45);
@@ -201,6 +208,7 @@ textarea {
   justify-content: center;
   min-height: 44px;
   padding: 0.7rem 0.9rem;
+  white-space: nowrap;
   border-radius: 2px;
   border: 1px solid transparent;
   color: var(--muted);
@@ -274,6 +282,8 @@ textarea {
   display: none;
   width: 48px;
   height: 48px;
+  padding: 0;
+  color: inherit;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
@@ -282,7 +292,7 @@ textarea {
   cursor: pointer;
 }
 
-.hamburger span {
+.hamburger-inner span {
   display: block;
   width: 18px;
   height: 2px;
@@ -314,10 +324,6 @@ textarea {
     linear-gradient(180deg, rgba(26, 11, 30, 0.24), rgba(26, 11, 30, 0.82)),
     radial-gradient(circle at 18% 22%, rgba(240, 206, 218, 0.2), transparent 18%),
     radial-gradient(circle at 80% 18%, rgba(209, 68, 99, 0.3), transparent 16%);
-}
-
-.hero .overlay {
-  display: none;
 }
 
 .hero-grid {
@@ -1011,6 +1017,17 @@ textarea {
   max-width: 100%;
 }
 
+/* Reserve the embed's height up front so the page does not jump when the
+   Strava map finally loads. */
+.route-embed .strava-embed-placeholder {
+  min-height: 420px;
+}
+
+.route-embed iframe {
+  min-height: 420px;
+  border: 0;
+}
+
 .warning {
   margin-top: 1rem;
   padding: 1rem 1.1rem;
@@ -1155,6 +1172,7 @@ textarea {
 }
 
 .lightbox-stage {
+  position: relative;
   width: min(100%, 1100px);
   max-height: calc(100vh - 4rem);
   display: grid;
@@ -1300,13 +1318,19 @@ tbody tr:hover {
   border-color: rgba(241, 165, 90, 0.25);
 }
 
+/* Visible content is the default. The reveal animation is opt-in, applied only
+   once site.js has confirmed it is running, so a script that never loads or
+   that throws can never leave the page permanently blank. */
 .fade-section {
-  opacity: 0;
-  transform: translateY(18px);
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
-.fade-section.show {
+.reveal-ready .fade-section {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.reveal-ready .fade-section.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1359,6 +1383,190 @@ tbody tr:hover {
   border: 0;
 }
 
+:focus-visible {
+  outline: 3px solid var(--accent-cool);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.15rem;
+  border-radius: 0 0 10px 10px;
+  background: var(--accent);
+  color: #fff4f7;
+  text-decoration: none;
+  font-weight: 700;
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ---- Frequently asked questions ---------------------------------------- */
+
+.faq-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: rgba(209, 68, 99, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  min-height: 48px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--display-font);
+  font-size: 1.35rem;
+  letter-spacing: var(--headline-spacing);
+  color: var(--text);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item summary:hover {
+  color: var(--accent-cool);
+}
+
+.faq-answer {
+  padding: 0 1.15rem 1.15rem;
+  color: var(--muted);
+}
+
+.faq-answer p {
+  margin: 0 0 0.7rem;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Long-form guide content -------------------------------------------- */
+
+.prose {
+  max-width: 68ch;
+}
+
+.prose h3 {
+  margin: 1.9rem 0 0.6rem;
+}
+
+.prose h3:first-child {
+  margin-top: 0;
+}
+
+.prose p {
+  color: var(--muted);
+}
+
+.prose a {
+  color: var(--accent-cool);
+  text-underline-offset: 3px;
+}
+
+.guide-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.guide-toc a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.guide-toc a:hover,
+.guide-toc a:focus-visible {
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.term-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.term-list dt {
+  font-family: var(--display-font);
+  font-size: 1.3rem;
+  letter-spacing: var(--headline-spacing);
+  color: var(--accent-cool);
+}
+
+.term-list dd {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+/* ---- Photo viewer additions --------------------------------------------- */
+
+.photo-tile-missing {
+  opacity: 0.45;
+}
+
+.lightbox.is-loading .lightbox-stage::before {
+  content: "Loading photo";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.lightbox-full {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  color: var(--accent-cool);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1371,9 +1579,17 @@ tbody tr:hover {
     transition: none !important;
   }
 
-  .fade-section {
+  .reveal-ready .fade-section {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* The date badge is the first thing to give up room once the nav gets tight.
+   Six nav items plus the wordmark need the full width below this. */
+@media (max-width: 1500px) {
+  .nav-badge {
+    display: none;
   }
 }
 
