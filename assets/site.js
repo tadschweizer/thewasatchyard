@@ -50,14 +50,7 @@
 
   function initReveal() {
     var sections = document.querySelectorAll('.fade-section');
-    if (!sections.length) return;
-
-    if (!('IntersectionObserver' in window)) {
-      sections.forEach(function (el) {
-        el.classList.add('show');
-      });
-      return;
-    }
+    if (!sections.length || !('IntersectionObserver' in window)) return;
 
     // Trigger on any intersection rather than a visible-area ratio: a section
     // taller than the viewport can never reach a fractional threshold, which
@@ -74,9 +67,18 @@
       { threshold: 0 }
     );
 
+    // Anything already on screen is marked shown before the hiding styles are
+    // enabled, so enabling them cannot flash content out and back in.
     sections.forEach(function (el) {
-      observer.observe(el);
+      var box = el.getBoundingClientRect();
+      if (box.top < window.innerHeight && box.bottom > 0) {
+        el.classList.add('show');
+      } else {
+        observer.observe(el);
+      }
     });
+
+    document.documentElement.classList.add('reveal-ready');
   }
 
   /* ---- Countdown -------------------------------------------------------- */

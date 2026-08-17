@@ -1318,22 +1318,21 @@ tbody tr:hover {
   border-color: rgba(241, 165, 90, 0.25);
 }
 
+/* Visible content is the default. The reveal animation is opt-in, applied only
+   once site.js has confirmed it is running, so a script that never loads or
+   that throws can never leave the page permanently blank. */
 .fade-section {
-  opacity: 0;
-  transform: translateY(18px);
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
-.fade-section.show {
-  opacity: 1;
-  transform: translateY(0);
+.reveal-ready .fade-section {
+  opacity: 0;
+  transform: translateY(18px);
 }
 
-/* Without scripting there is nothing to add the .show class, so the reveal
-   animation must never be what decides whether the page has visible content. */
-.no-js .fade-section {
+.reveal-ready .fade-section.show {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
 
 .footer {
@@ -1580,7 +1579,7 @@ tbody tr:hover {
     transition: none !important;
   }
 
-  .fade-section {
+  .reveal-ready .fade-section {
     opacity: 1;
     transform: none;
   }

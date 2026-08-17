@@ -66,21 +66,31 @@ them and hand them a registration link.
 7. **Community posts.** r/ultrarunning race threads and the large Backyard
    Ultra Facebook groups are where this format's audience actually lives. Post
    the race announcement and the guide page.
-8. **Keep results current.** Publish the full finisher list on `results.html`
-   after each race rather than only the winner. Runners search their own names,
-   and a complete results page is a page people link to.
+8. **Keep results current.** Add a card to `results.html` after each race
+   naming the last runner standing and their lap count. It is one edit a year
+   and it is what makes the page rank for the branded results search.
 
-## Things to confirm or fill in
+## Race details reflected in the structured data
 
-- **Sponsorship contact address.** The old `info@thewasatchyard.com` mailto was
-  pointing at a domain that does not resolve, so mail to it could not be
-  delivered. That button now points at the on-page contact form. Swap in a real
-  address (something `@wasatchyard.com`) when one exists.
-- **Entry fee.** The `offers` block in the event schema has no `price` because
-  the UltraSignup fee was not available to confirm. Adding the real price and
-  `validFrom` date strengthens the event rich result.
-- **End time.** The schema uses a 24-hour `endDate` as an estimate, since a
-  backyard ultra has no scheduled finish. Adjust if there is a hard cap.
+- Entry fee is $100, set as `offers.price` on the event schema.
+- There is no time cap, so the event schema carries a `startDate` with no
+  `endDate` rather than inventing a finish time.
+- The sponsorship button points at the on-page contact form. The previous
+  `info@thewasatchyard.com` address was on a domain that does not resolve, so
+  mail to it could not be delivered. If a real `@wasatchyard.com` address is
+  set up later, use it there.
+
+## Why the results page is not a redirect
+
+The obvious shortcut is to point `results.html` straight at UltraSignup. It is
+worth not doing that. "wasatch yard results" is a branded search with real
+volume, and a page that immediately bounces visitors off-site hands that result
+to UltraSignup instead of keeping it. The page now carries only the short
+version — who was last standing, in a card per year — and links out for the
+full finisher list, so there is no table to hand-maintain.
+
+Adding a year is one card. Keep naming the winner in text: runners search their
+own names, and that sentence is the part search engines can actually index.
 
 ## Performance notes
 
