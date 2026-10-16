@@ -1,0 +1,4 @@
+output/
+.playwright-mcp/
+.playwright-cli/
+results-page*.png
