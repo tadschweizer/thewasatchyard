@@ -848,6 +848,8 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.logo-box-white { background: #fff; }
+
 .logo-box img {
   max-width: 78%;
   max-height: 88px;
