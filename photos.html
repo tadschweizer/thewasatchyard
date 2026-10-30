@@ -114,7 +114,7 @@
       <h1>Photo Gallery</h1>
       <div class="hero-copy">
         <p>The start line, the crew zone, and the long night in Round Valley.</p>
-        <p class="event-date">We will keep this gallery updated as new race photos come in.</p>
+        <p class="event-date">The 2026 race, photographed by Bravography, alongside moments from earlier races.</p>
       </div>
     </div>
   </div>
@@ -125,11 +125,16 @@
     <div class="section-intro">
       <span class="section-label">Gallery</span>
       <h2>Scenes from The Wasatch Yard</h2>
-      <p><span id="photo-count">74</span> race-day photos from Round Valley, Park City. Select any image to open it full size.</p>
+      <p><span id="photo-count">81</span> race-day photos from Round Valley, Park City. Select any image to open it full size.</p>
     </div>
 
-    <div class="photo-wall" id="photo-wall"></div>
+    <h3 id="photos-2026">October 2026</h3>
+    <p class="photo-credit">Photos by <a href="https://bravography.co/" target="_blank" rel="noopener">Bravography</a>. <a href="https://bravography.pixieset.com/wasatchbackyardultraoctober2026/" target="_blank" rel="noopener">Browse the full 2026 collection</a>.</p>
+    <div class="race-photo-grid" id="photo-wall-2026" aria-labelledby="photos-2026"></div>
+    <h3 id="photos-archive">Earlier race moments</h3>
+    <div class="photo-wall" id="photo-wall" aria-labelledby="photos-archive"></div>
     <noscript>
+      <p><a href="https://bravography.pixieset.com/wasatchbackyardultraoctober2026/" target="_blank" rel="noopener">Browse the 2026 photos by Bravography</a>.</p>
       <p>The photo gallery needs JavaScript to load. You can still browse race-day images in the
         <a href="https://ultrasignup.com/results_event.aspx?did=131654" target="_blank" rel="noopener">event listing on UltraSignup</a>
         or get in touch through the form below.</p>
@@ -203,6 +208,7 @@
     <img id="lightbox-image" src="" alt="">
     <div class="lightbox-meta">
       <p class="lightbox-count" id="lightbox-count"></p>
+      <p id="lightbox-credit" hidden></p>
       <p><a class="lightbox-full" id="lightbox-full" href="#" target="_blank" rel="noopener">Open full size in a new tab</a></p>
     </div>
   </div>

@@ -130,8 +130,15 @@
 
   /* ---- Photo gallery ---------------------------------------------------- */
 
-  // [file name, thumbnail width, thumbnail height] in display order.
+  // [file name, thumbnail width, thumbnail height, optional description, optional credit].
   var PHOTOS = [
+    ["bravography-2026-50.jpg",640,427,"The orange start arch and crew tents in afternoon light.","Bravography"],
+    ["bravography-2026-64.jpg",640,427,"Runners gathered beneath the start arch before a lap.","Bravography"],
+    ["bravography-2026-66.jpg",640,427,"Runners leaving the start line together.","Bravography"],
+    ["bravography-2026-177.jpg",640,427,"Crew members sharing a moment at the aid station.","Bravography"],
+    ["bravography-2026-133.jpg",640,427,"Headlamp trails beneath the start arch after dark.","Bravography"],
+    ["bravography-2026-689.jpg",640,427,"Runners and supporters smiling together at night.","Bravography"],
+    ["bravography-2026-748.jpg",640,427,"Two runners heading out beneath the arch at night.","Bravography"],
     ["EditedBackyard.jpg",640,960],
     ["EditedBackyard-4.jpg",640,960],
     ["EditedBackyard-7.jpg",640,960],
@@ -209,12 +216,15 @@
   ];
 
   function photoAlt(index) {
+    if (PHOTOS[index][3]) return PHOTOS[index][3] + ' Wasatch Yard, October 2026. Photo by ' + PHOTOS[index][4] + '.';
     return 'Runners at The Wasatch Yard backyard ultra in Round Valley, Park City, Utah - photo ' +
       (index + 1) + ' of ' + PHOTOS.length;
   }
 
   function initGallery() {
     var wall = document.getElementById('photo-wall');
+    var currentWall = document.getElementById('photo-wall-2026');
+    var credit = document.getElementById('lightbox-credit');
     var lightbox = document.getElementById('lightbox');
     if (!wall || !lightbox) return;
 
@@ -253,7 +263,7 @@
         event.preventDefault();
         open(index);
       });
-      wall.appendChild(link);
+      (photo[4] && currentWall ? currentWall : wall).appendChild(link);
     });
 
     if (countLabel) countLabel.textContent = String(PHOTOS.length);
@@ -267,6 +277,10 @@
       image.alt = photoAlt(activeIndex);
       counter.textContent = 'Photo ' + (activeIndex + 1) + ' of ' + PHOTOS.length;
       if (fullSizeLink) fullSizeLink.href = path;
+      if (credit) {
+        credit.hidden = !PHOTOS[activeIndex][4];
+        credit.textContent = PHOTOS[activeIndex][4] ? 'Photo by ' + PHOTOS[activeIndex][4] : '';
+      }
     }
 
     image.addEventListener('load', function () {
